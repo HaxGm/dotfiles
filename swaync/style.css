@@ -171,29 +171,6 @@
   color: @cc-bg;
 }
 
-.widget-dnd {
-  background: @noti-bg-darker;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  font-size: large;
-  color: @blue-base;
-}
-
-.widget-dnd>switch {
-  background: @blue-base;
-  border-radius: 0;
-}
-
-.widget-dnd>switch:checked {
-  background: @red-base;
-  border: 1px solid @red-base;
-}
-
-.widget-label>label {
-  font-size: 1rem;
-  color: @text-color;
-  margin: 10px;
-}
 
 .widget-buttons-grid {
   font-size: x-large;
@@ -220,14 +197,6 @@
   color: @cc-bg;
 }
 
-.widget-volume,
-.widget-backlight {
-  background: @noti-bg-darker;
-  padding: 5px;
-  margin: 5px 10px;
-  font-size: 2rem;
-  color: @blue-base;
-}
 
 .widget-mpris {
   color: @text-color;

@@ -41,12 +41,6 @@
       "show-album-art": "always",
       "loop-carousel": false
     },
-    "volume": {
-      "label": "󰕾"
-    },
-    "backlight": {
-      "label": "󰃟"
-    },
     "buttons-grid": {
       "actions": [
         {
@@ -56,14 +50,6 @@
         {
           "label": "󰜉",
           "command": "systemctl reboot"
-        },
-        {
-          "label": "󰌾",
-          "command": ""
-        },
-        {
-          "label": "󰍃",
-          "command": ""
         },
         {
           "label": "󰕾",

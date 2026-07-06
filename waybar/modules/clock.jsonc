@@ -1,0 +1,10 @@
+{
+    "clock": {
+        "interval": 60,
+        "timezone": "Europe/Warsaw",
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip": true,
+        "tooltip-format": "Timezone: {:%Z}"
+    }
+}

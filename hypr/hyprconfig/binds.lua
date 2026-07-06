@@ -3,10 +3,10 @@
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "nautilus"
-local notificationCenter = "swaync-client -t"
-local menu        = "/home/piotr/.config/rofi/launcher.sh"
+local terminal              = "kitty"
+local fileManager           = "nautilus"
+local notificationCenter    = "swaync-client -t"
+local menu                  = "/home/piotr/.config/rofi/launcher.sh"
 
 
 ---------------------

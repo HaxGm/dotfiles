@@ -1,0 +1,156 @@
+@import "colors/palette.css";
+
+* {
+    all: unset;
+    font-family: "AdwaitaMono Nerd Font Mono", monospace;
+    font-size: 14px;
+}
+
+/* Window */
+window#waybar {
+    background-color: @normal_black;
+    color: @normal_white;
+    border-radius: 0;
+    border-bottom: 2px solid alpha(@bright_black, 0.35);
+}
+
+
+/* Tooltip */
+tooltip {
+    background-color: @normal_black; /* Dark background with slight transparency */
+    border: 2px solid alpha(@bright_blue, 0.5); /* Colored border */
+    box-shadow: @bright_black 2px 2px 5px 2px; /* Drop shadow for depth */
+}
+
+
+/* Common module styling */
+#battery,
+#wireplumber,
+#clock,
+#network,
+#bluetooth {
+    padding: 4px 14px;
+    margin: 4px 3px 6px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+
+/* Workspaces */
+#workspaces {
+    margin: 4px 3px;
+}
+
+#workspaces button {
+    padding: 4px 10px;
+    margin: 2px 2px;
+    border-radius: 10px;
+    color: @bright_black;
+    background: alpha(@bright_black, 0.15);
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    background: alpha(@normal_blue, 0.22);
+    color: @bright_blue;
+}
+
+#workspaces button:hover {
+    background: alpha(@normal_blue, 0.22);
+    color: @normal_blue;
+}
+
+#workspaces button.urgent {
+    background: alpha(@normal_red, 0.25);
+    color: @bright_red;
+}
+
+
+/* Clock */
+#clock {
+    color: @normal_cyan;
+    background: alpha(@normal_cyan, 0.10);
+}
+
+#clock:hover {
+    background: alpha(@normal_cyan, 0.22);
+}
+
+
+/* Battery */
+#battery {
+    color: @normal_green;
+    background: alpha(@normal_green, 0.10);
+}
+
+#battery:hover {
+    background: alpha(@normal_green, 0.22);
+}
+
+#battery.full {
+    color: @bright_cyan;
+    background: alpha(@bright_cyan, 0.10);
+}
+
+#battery.full:hover {
+    background: alpha(@bright_cyan, 0.22);
+}
+
+#battery.warning:not(.charging) {
+    color: @normal_yellow;
+    background: alpha(@normal_yellow, 0.10);
+}
+
+#battery.critical:not(.charging) {
+    color: @normal_red;
+    background: alpha(@normal_red, 0.10);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+/* Wireplumber */
+#wireplumber {
+    color: @normal_magenta;
+    background: alpha(@normal_magenta, 0.10);
+}
+
+#wireplumber:hover {
+    background: alpha(@normal_magenta, 0.22);
+}
+
+
+/* Network */
+#network {
+    color: @bright_blue;
+    background: alpha(@bright_blue, 0.10);
+}
+
+#network:hover {
+    background: alpha(@bright_blue, 0.22);
+}
+
+
+/* Bluetooth */
+#bluetooth {
+    color: @normal_yellow;
+    background: alpha(@normal_yellow, 0.10);
+}
+
+#bluetooth:hover {
+    background: alpha(@normal_yellow, 0.22);
+}
+
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

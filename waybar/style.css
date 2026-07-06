@@ -28,11 +28,24 @@ tooltip {
 #wireplumber,
 #clock,
 #network,
-#bluetooth {
+#bluetooth,
+#custom-arch {
     padding: 4px 14px;
     margin: 4px 3px 6px;
     border-radius: 12px;
     transition: all 0.3s ease;
+}
+
+
+/* Arch Button */
+#custom-arch {
+    font-size: 16px;
+    color: @bright_blue;
+    background: alpha(@bright_blue, 0.10);
+}
+
+#custom-arch:hover {
+    background: alpha(@bright_blue, 0.22);
 }
 
 

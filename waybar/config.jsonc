@@ -11,7 +11,8 @@
         "wireplumber#sink",
         "bluetooth",
         "network",
-        "battery"
+        "battery",
+        "custom/arch"
     ],
     "hyprland/workspaces": {
         "format": "{name}",
@@ -93,5 +94,12 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "overskride"
+    },
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "Start Menu",
+        "on-click": "swaync-client -t -sw",
+        "interval": "once"
     }
 }

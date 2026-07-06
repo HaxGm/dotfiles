@@ -6,7 +6,7 @@
 local terminal    = "kitty"
 local fileManager = "nautilus"
 local notificationCenter = "swaync-client -t"
-local menu        = "/home/piotr/.config/rofi/type-3/launcher.sh"
+local menu        = "/home/piotr/.config/rofi/launcher.sh"
 
 
 ---------------------

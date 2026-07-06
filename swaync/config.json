@@ -63,11 +63,11 @@
         },
         {
           "label": "󰖩",
-          "command": "nm-connection-editor"
+          "command": "nm-connection-editor & swaync-client -cp"
         },
         {
           "label": "󰂯",
-          "command": "overskride"
+          "command": "overskride & swaync-client -cp"
         }
       ]
     }

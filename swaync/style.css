@@ -11,7 +11,7 @@
 @define-color text-color @normal_white;
 @define-color text-color-disabled @bright_black;
 @define-color bg-selected @normal_blue;
-@define-color border-green @normal_green;
+@define-color border-green @normal_blue;
 @define-color red-base @normal_red;
 @define-color red-hover @bright_red;
 @define-color green-base @bright_green;
@@ -125,7 +125,7 @@
   font-size: 16px;
   font-weight: 700;
   background: transparent;
-  color: @green-base;
+  color: @blue-base;
   text-shadow: none;
 }
 
@@ -148,7 +148,7 @@
 
 .control-center {
   background: @cc-bg;
-  border: 2px solid @border-green;
+  border: none;
 }
 
 .widget-title {

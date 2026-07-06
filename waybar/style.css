@@ -40,12 +40,12 @@ tooltip {
 /* Arch Button */
 #custom-arch {
     font-size: 16px;
-    color: @bright_blue;
-    background: alpha(@bright_blue, 0.10);
+    color: @normal_blue;
+    background: alpha(@normal_blue, 0.10);
 }
 
 #custom-arch:hover {
-    background: alpha(@bright_blue, 0.22);
+    background: alpha(@normal_blue, 0.22);
 }
 
 
@@ -92,12 +92,12 @@ tooltip {
 
 /* Battery */
 #battery {
-    color: @normal_green;
-    background: alpha(@normal_green, 0.10);
+    color: @bright_green;
+    background: alpha(@bright_green, 0.10);
 }
 
 #battery:hover {
-    background: alpha(@normal_green, 0.22);
+    background: alpha(@bright_green, 0.22);
 }
 
 #battery.full {
@@ -134,12 +134,12 @@ tooltip {
 
 /* Network */
 #network {
-    color: @bright_blue;
-    background: alpha(@bright_blue, 0.10);
+    color: @normal_cyan;
+    background: alpha(@normal_cyan, 0.10);
 }
 
 #network:hover {
-    background: alpha(@bright_blue, 0.22);
+    background: alpha(@normal_cyan, 0.22);
 }
 
 

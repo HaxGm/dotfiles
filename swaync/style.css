@@ -1,21 +1,21 @@
 @import url("/home/piotr/.config/waybar/colors/palette.css");
 
-@define-color cc-bg @normal_black;
-@define-color noti-border-color @normal_white;
-@define-color noti-bg shade(@normal_black, 0.85);
-@define-color noti-bg-darker shade(@normal_black, 1.3);
-@define-color noti-bg-hover shade(@normal_black, 1.15);
-@define-color noti-bg-focus shade(@normal_black, 0.9);
-@define-color noti-close-bg @normal_white;
-@define-color noti-close-bg-hover @normal_white;
-@define-color text-color @normal_white;
+@define-color cc-bg @primary_background;
+@define-color noti-border-color @normal_black;
+@define-color noti-bg shade(@primary_background, 1.8);
+@define-color noti-bg-darker shade(@primary_background, 2.4);
+@define-color noti-bg-hover shade(@primary_background, 3.0);
+@define-color noti-bg-focus shade(@primary_background, 1.6);
+@define-color noti-close-bg @bright_white;
+@define-color noti-close-bg-hover @bright_white;
+@define-color text-color @primary_foreground;
 @define-color text-color-disabled @bright_black;
-@define-color bg-selected @normal_blue;
-@define-color border-green @normal_blue;
+@define-color bg-selected @selection_background;
+@define-color border-green @normal_green;
 @define-color red-base @normal_red;
 @define-color red-hover @bright_red;
 @define-color green-base @bright_green;
-@define-color blue-base @normal_blue;
+@define-color blue-base @bright_blue;
 
 * {
   font-family: "AdwaitaMono Nerd Font", monospace;

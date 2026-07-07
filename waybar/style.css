@@ -8,9 +8,11 @@
 
 /* Window */
 window#waybar {
-    background-color: alpha(@normal_black, 0);
+    background-color: transparent;
     color: @normal_white;
-    border-radius: 0
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
 }
 
 

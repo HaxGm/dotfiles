@@ -1,19 +1,28 @@
-/* Normal Colors */
-@define-color normal_black   #1e232b;
-@define-color normal_red     #ea6c73;
-@define-color normal_green   #7fd962;
-@define-color normal_yellow  #f9af4f;
-@define-color normal_blue    #53bdfa;
-@define-color normal_magenta #cda1fa;
-@define-color normal_cyan    #90e1c6;
-@define-color normal_white   #c7c7c7;
+/* GitHub Dark - GTK CSS Color Definitions */
 
-/* Bright Colors */
-@define-color bright_black   #686868;
-@define-color bright_red     #f07178;
-@define-color bright_green   #aad94c;
-@define-color bright_yellow  #ffb454;
-@define-color bright_blue    #59c2ff;
-@define-color bright_magenta #d2a6ff;
-@define-color bright_cyan    #95e6cb;
-@define-color bright_white   #ffffff;
+@define-color primary_foreground #e6edf3;
+@define-color primary_background #010409;
+
+@define-color cursor_text #010409;
+@define-color cursor_cursor #e6edf3;
+
+@define-color selection_text #e6edf3;
+@define-color selection_background #264f78;
+
+@define-color normal_black #484f58;
+@define-color normal_red #ff7b72;
+@define-color normal_green #3fb950;
+@define-color normal_yellow #d29922;
+@define-color normal_blue #58a6ff;
+@define-color normal_magenta #bc8cff;
+@define-color normal_cyan #39c5cf;
+@define-color normal_white #b1bac4;
+
+@define-color bright_black #6e7681;
+@define-color bright_red #ffa198;
+@define-color bright_green #56d364;
+@define-color bright_yellow #e3b341;
+@define-color bright_blue #79c0ff;
+@define-color bright_magenta #d2a8ff;
+@define-color bright_cyan #56d4dd;
+@define-color bright_white #ffffff;

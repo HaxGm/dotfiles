@@ -8,8 +8,8 @@
 
 /* Window */
 window#waybar {
-    background-color: transparent;
-    color: @normal_white;
+    background-color: @primary_background;
+    color: @primary_foreground;
     border-radius: 0;
     border: none;
     box-shadow: none;
@@ -18,9 +18,9 @@ window#waybar {
 
 /* Tooltip */
 tooltip {
-    background-color: @normal_black; /* Dark background with slight transparency */
-    border: 2px solid alpha(@bright_blue, 0.5); /* Colored border */
-    box-shadow: @bright_black 2px 2px 5px 2px; /* Drop shadow for depth */
+    background-color: @primary_background; /* Dark background */
+    border: 2px solid alpha(@selection_background, 0.7); /* Selection-tinted border */
+    box-shadow: alpha(@primary_background, 0.8) 2px 2px 5px 2px; /* Deep shadow */
 }
 
 
@@ -41,12 +41,12 @@ tooltip {
 /* Arch Button */
 #custom-arch {
     font-size: 16px;
-    color: @normal_blue;
-    background: alpha(@normal_blue, 0.10);
+    color: @bright_blue;
+    background: alpha(@normal_blue, 0.12);
 }
 
 #custom-arch:hover {
-    background: alpha(@normal_blue, 0.22);
+    background: alpha(@bright_blue, 0.22);
 }
 
 
@@ -59,19 +59,19 @@ tooltip {
     padding: 4px 15px;
     margin: 2px 2px;
     border-radius: 10px;
-    color: @bright_black;
-    background: alpha(@bright_black, 0.15);
+    color: @normal_white;
+    background: alpha(@normal_black, 0.15);
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    background: alpha(@normal_blue, 0.22);
+    background: alpha(@selection_background, 0.45);
     color: @bright_blue;
 }
 
 #workspaces button:hover {
-    background: alpha(@normal_blue, 0.22);
-    color: @normal_blue;
+    background: alpha(@selection_background, 0.35);
+    color: @bright_blue;
 }
 
 #workspaces button.urgent {
@@ -82,37 +82,37 @@ tooltip {
 
 /* Clock */
 #clock {
-    color: @normal_cyan;
+    color: @bright_cyan;
     background: alpha(@normal_cyan, 0.10);
 }
 
 #clock:hover {
-    background: alpha(@normal_cyan, 0.22);
+    background: alpha(@bright_cyan, 0.22);
 }
 
 
 /* Battery */
 #battery {
-    color: @bright_green;
-    background: alpha(@bright_green, 0.10);
+    color: @normal_green;
+    background: alpha(@normal_green, 0.10);
 }
 
 #battery:hover {
-    background: alpha(@bright_green, 0.22);
+    background: alpha(@normal_green, 0.22);
 }
 
 #battery.full {
-    color: @bright_cyan;
-    background: alpha(@bright_cyan, 0.10);
+    color: @normal_cyan;
+    background: alpha(@normal_cyan, 0.10);
 }
 
 #battery.full:hover {
-    background: alpha(@bright_cyan, 0.22);
+    background: alpha(@normal_cyan, 0.22);
 }
 
 #battery.warning:not(.charging) {
-    color: @normal_yellow;
-    background: alpha(@normal_yellow, 0.10);
+    color: @bright_yellow;
+    background: alpha(@normal_yellow, 0.12);
 }
 
 #battery.critical:not(.charging) {
@@ -124,34 +124,34 @@ tooltip {
 
 /* Wireplumber */
 #wireplumber {
-    color: @normal_magenta;
+    color: @bright_magenta;
     background: alpha(@normal_magenta, 0.10);
 }
 
 #wireplumber:hover {
-    background: alpha(@normal_magenta, 0.22);
+    background: alpha(@bright_magenta, 0.22);
 }
 
 
 /* Network */
 #network {
-    color: @normal_cyan;
+    color: @bright_cyan;
     background: alpha(@normal_cyan, 0.10);
 }
 
 #network:hover {
-    background: alpha(@normal_cyan, 0.22);
+    background: alpha(@bright_cyan, 0.22);
 }
 
 
 /* Bluetooth */
 #bluetooth {
-    color: @normal_yellow;
+    color: @bright_yellow;
     background: alpha(@normal_yellow, 0.10);
 }
 
 #bluetooth:hover {
-    background: alpha(@normal_yellow, 0.22);
+    background: alpha(@bright_yellow, 0.22);
 }
 
 

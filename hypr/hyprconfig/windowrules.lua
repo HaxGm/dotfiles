@@ -77,3 +77,10 @@ hl.window_rule({
     size = "600 400",
     center = true
 })
+
+hl.window_rule({
+    match = { class = "^(blueman-manager)$"},
+    float = true,
+    size = "600 400",
+    center = true
+})

@@ -58,9 +58,9 @@ inputbar {
     spacing:                     10px;
     margin:                      0px;
     padding:                     12px;
-    border:                      1px solid;
-    border-radius:               4px;
-    border-color:                @selected;
+    border:                      2px solid;
+    border-radius:               0px;
+    border-color:                #58a6ff80;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
@@ -136,9 +136,9 @@ element normal.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    border:                      1px solid;
-    border-radius:               4px;
-    border-color:                @selected;
+    border:                      2px solid;
+    border-radius:               0px;
+    border-color:                #58a6ff80;
     background-color:            @background;
     text-color:                  @foreground;
 }
@@ -160,9 +160,9 @@ element-text {
 /*****----- Message -----*****/
 error-message {
     padding:                     10px;
-    border:                      1px solid;
+    border:                      2px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                #58a6ff80;
     background-color:            black / 10%;
     text-color:                  @foreground;
 }

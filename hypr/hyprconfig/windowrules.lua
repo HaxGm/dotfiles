@@ -5,8 +5,6 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
--- Example window rules that are useful
-
 local suppressMaximizeRule = hl.window_rule({   
     -- Ignore maximize requests from all apps. You'll probably like this.
     -- Made into variable for easy toggling on-off
@@ -66,7 +64,7 @@ hl.window_rule({
 
 -- pwvucontrol
 hl.window_rule({
-    match = { class = "^(com.saivert.pwvucontrol)$"},
+    match = { class = "^(com\\.saivert\\.pwvucontrol)$"},
     float = true,
     size = "600 400",
     center = true
@@ -74,7 +72,7 @@ hl.window_rule({
 
 -- Overskride
 hl.window_rule({
-    match = { class = "^(io.github.kaii_lb.Overskride)"},
+    match = { class = "^(io\\.github\\.kaii_lb\\.Overskride)$"},
     float = true,
     size = "600 400",
     center = true

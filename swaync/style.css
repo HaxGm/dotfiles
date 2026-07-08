@@ -11,11 +11,14 @@
 @define-color text-color @primary_foreground;
 @define-color text-color-disabled @bright_black;
 @define-color bg-selected @selection_background;
-@define-color border-green @normal_green;
+@define-color border-color @normal_blue;
 @define-color red-base @normal_red;
 @define-color red-hover @bright_red;
 @define-color green-base @bright_green;
 @define-color blue-base @bright_blue;
+@define-color cyan-base @normal_cyan;
+@define-color magenta-base @normal_magenta;
+@define-color yellow-base @normal_yellow;
 
 * {
   font-family: "AdwaitaMono Nerd Font", monospace;
@@ -59,7 +62,7 @@
 
 .notification {
   background: @cc-bg;
-  border: 2px solid @border-green;
+  border: 2px solid @border-color;
   margin: 3px -2px 3px 0;
 }
 
@@ -87,12 +90,12 @@
 }
 
 .notification-action {
-  border: 2px solid @border-green;
+  border: 2px solid @border-color;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: @blue-base;
+  color: @cyan-base;
   background: @cc-bg;
 }
 
@@ -125,7 +128,7 @@
   font-size: 16px;
   font-weight: 700;
   background: transparent;
-  color: @blue-base;
+  color: @cyan-base;
   text-shadow: none;
 }
 
@@ -152,8 +155,9 @@
 }
 
 .widget-title {
-  color: @blue-base;
+  color: @magenta-base;
   background: @noti-bg-darker;
+  border: 2px solid alpha(@border-color, 0.5);
   padding: 5px 10px;
   margin: 10px;
   font-size: 1.5rem;
@@ -167,7 +171,7 @@
 }
 
 .widget-title>button:hover {
-  background: @red-base;
+  background: @magenta-base;
   color: @cc-bg;
 }
 
@@ -177,6 +181,7 @@
   padding: 5px;
   margin: 0px 10px 10px 10px;
   background: @noti-bg-darker;
+  border: 2px solid alpha(@border-color, 0.5);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
@@ -184,11 +189,12 @@
   padding: 4px 30px;
   background: @cc-bg;
   color: @text-color;
+  border: 2px solid alpha(@magenta-base, 0.5);
   transition: background-color 0.15s ease-in-out;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @blue-base;
+  background: @cyan-base;
   color: @cc-bg;
 }
 
@@ -201,6 +207,7 @@
 .widget-mpris {
   color: @text-color;
   background: @noti-bg-darker;
+  border: 2px solid alpha(@border-color, 0.5);
   margin: 0px 10px 10px 10px;
   box-shadow: none;
 }
@@ -223,6 +230,6 @@ picture.mpris-background {
 }
 
 .notification-action>button:hover {
-  background-color: @border-green;
+  background-color: @cyan-base;
   color: @cc-bg;
 }

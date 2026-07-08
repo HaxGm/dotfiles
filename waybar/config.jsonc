@@ -6,12 +6,14 @@
         "~/.config/waybar/modules/wireplumber.jsonc",
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/bluetooth.jsonc",
-        "~/.config/waybar/modules/arch.jsonc"
+        "~/.config/waybar/modules/arch.jsonc",
+        "~/.config/waybar/modules/tray.json"
     ],
     "layer": "top",
     "position": "top",
     "modules-left": [
         "hyprland/workspaces",
+        "tray"
     ],
     "modules-center": [
         "clock"

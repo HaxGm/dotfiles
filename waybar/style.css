@@ -16,8 +16,9 @@ window#waybar {
 }
 
 
-/* Tooltip */
-tooltip {
+/* Tooltip, tray menu */
+tooltip,
+#tray menu {
     background-color: @primary_background; /* Dark background */
     border: 2px solid alpha(@selection_background, 0.7); /* Selection-tinted border */
     box-shadow: alpha(@primary_background, 0.8) 2px 2px 5px 2px; /* Deep shadow */
@@ -30,7 +31,8 @@ tooltip {
 #clock,
 #network,
 #bluetooth,
-#custom-arch {
+#custom-arch,
+#tray {
     padding: 4px 14px;
     margin: 4px 3px 6px;
     border-radius: 12px;
@@ -39,6 +41,11 @@ tooltip {
     transition: all 0.3s ease;
 }
 
+
+/* Tray */
+#tray {
+    border-color: alpha(@normal_white, 0.5);
+}
 
 /* Arch Button */
 #custom-arch {

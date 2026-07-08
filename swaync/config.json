@@ -28,7 +28,11 @@
       "app-name": ".*"
     }
   },
-  "widgets": ["title", "buttons-grid", "mpris"],
+  "widgets": [
+    "title",
+    "buttons-grid",
+    "mpris"
+  ],
   "widget-config": {
     "title": {
       "text": "Notification Center",
@@ -36,7 +40,9 @@
       "button-text": "󰆴 Clear All"
     },
     "mpris": {
-      "blacklist": ["playerctl"],
+      "blacklist": [
+        "playerctl"
+      ],
       "autohide": false,
       "show-album-art": "always",
       "loop-carousel": false
@@ -67,7 +73,7 @@
         },
         {
           "label": "󰂯",
-          "command": "overskride & swaync-client -cp"
+          "command": "blueman-manager & swaync-client -cp"
         }
       ]
     }

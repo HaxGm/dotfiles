@@ -2,7 +2,6 @@
 ---- AUTOSTART ----
 -------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
 hl.on("hyprland.start", function () 
   -- Pass Wayland environment variables to systemd user services

@@ -2,8 +2,6 @@
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
 local suppressMaximizeRule = hl.window_rule({   
     -- Ignore maximize requests from all apps. You'll probably like this.
@@ -31,7 +29,7 @@ hl.window_rule({
 })
 
 
--- rofi animation
+-- rofi 
 hl.layer_rule({
     match = { namespace = "rofi"},
     name = "rofi-popup",
@@ -39,7 +37,7 @@ hl.layer_rule({
     dim_around = true
 })
 
--- notification animation
+-- swaync 
 hl.layer_rule({
     match = { namespace = "swaync-control-center"},
     name = "notification-animation",
@@ -70,14 +68,7 @@ hl.window_rule({
     center = true
 })
 
--- Overskride
-hl.window_rule({
-    match = { class = "^(io\\.github\\.kaii_lb\\.Overskride)$"},
-    float = true,
-    size = "600 400",
-    center = true
-})
-
+-- blueman-manager
 hl.window_rule({
     match = { class = "^(blueman-manager)$"},
     float = true,

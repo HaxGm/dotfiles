@@ -44,6 +44,9 @@ export GPG_TTY=$(tty)
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
+# Syntax Highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # Added by Antigravity CLI installer
 export PATH="$HOME/.local/bin:$PATH"

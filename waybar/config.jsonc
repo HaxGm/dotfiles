@@ -1,13 +1,13 @@
 {
     "include": [
-        "~/.config/waybar/modules/workspaces.jsonc",
-        "~/.config/waybar/modules/clock.jsonc",
-        "~/.config/waybar/modules/battery.jsonc",
-        "~/.config/waybar/modules/wireplumber.jsonc",
-        "~/.config/waybar/modules/network.jsonc",
-        "~/.config/waybar/modules/bluetooth.jsonc",
-        "~/.config/waybar/modules/arch.jsonc",
-        "~/.config/waybar/modules/tray.jsonc"
+        "modules/workspaces.jsonc",
+        "modules/clock.jsonc",
+        "modules/battery.jsonc",
+        "modules/wireplumber.jsonc",
+        "modules/network.jsonc",
+        "modules/bluetooth.jsonc",
+        "modules/arch.jsonc",
+        "modules/tray.jsonc"
     ],
     "layer": "top",
     "position": "top",

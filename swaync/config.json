@@ -24,7 +24,7 @@
   "text-empty": "No Notification",
   "scripts": {
     "sound-script": {
-      "exec": "pw-play ~/.config/swaync/notification.ogg",
+      "exec": "pw-play notification.ogg",
       "app-name": ".*"
     }
   },

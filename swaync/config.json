@@ -30,7 +30,6 @@
   },
   "widgets": [
     "title",
-    "buttons-grid",
     "mpris"
   ],
   "widget-config": {
@@ -46,36 +45,6 @@
       "autohide": false,
       "show-album-art": "always",
       "loop-carousel": false
-    },
-    "buttons-grid": {
-      "actions": [
-        {
-          "label": "󰐥",
-          "command": "systemctl poweroff"
-        },
-        {
-          "label": "󰜉",
-          "command": "systemctl reboot"
-        },
-        {
-          "label": "󰕾",
-          "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-          "type": "toggle"
-        },
-        {
-          "label": "󰍬",
-          "command": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
-          "type": "toggle"
-        },
-        {
-          "label": "󰖩",
-          "command": "nm-connection-editor & swaync-client -cp"
-        },
-        {
-          "label": "󰂯",
-          "command": "blueman-manager & swaync-client -cp"
-        }
-      ]
     }
   }
 }

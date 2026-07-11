@@ -8,6 +8,7 @@ local notificationCenter    = "swaync-client -t"
 local menu                  = "$HOME/.config/rofi/launcher.sh"            -- rofi
 local statusBar             = "$HOME/.config/waybar/scripts/launch.sh"    -- waybar
 local lockScreen            = "hyprlock"                                  -- hyprlock
+local logout                = "wlogout"                                   -- wlogout
 
 
 ---------------------
@@ -24,8 +25,8 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(notificationCenter))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(statusBar))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen)) 
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(logout))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-
 
 -- Window management
 local closeWindowBind = hl.bind(mainMod .. " + W", hl.dsp.window.close())

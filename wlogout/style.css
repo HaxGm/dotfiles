@@ -1,0 +1,52 @@
+@import url("../waybar/colors/palette.css");
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: alpha(@primary_background, 0.9);
+}
+
+button {
+    border-radius: 0;
+    border-color: @normal_black;
+	text-decoration-color: @primary_foreground;
+    color: @primary_foreground;
+	background-color: @primary_background;
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+	background-color: @selection_background;
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}

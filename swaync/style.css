@@ -1,4 +1,4 @@
-@import url("/home/piotr/.config/waybar/colors/palette.css");
+@import "../waybar/colors/palette.css";
 
 @define-color cc-bg @primary_background;
 @define-color noti-border-color @normal_black;

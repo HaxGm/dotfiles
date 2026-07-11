@@ -3,7 +3,7 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "Start Menu",
-        "on-click": "swaync-client -t -sw",
+        "on-click": "wlogout",
         "interval": "once"
     }
 }

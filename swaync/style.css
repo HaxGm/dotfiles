@@ -173,8 +173,29 @@
   color: @cc-bg;
 }
 
+.widget-dnd {
+  color: @text-color;
+  background: @noti-bg-darker;
+  border: 2px solid alpha(@border-color, 0.5);
+  padding: 5px 10px;
+  margin: 0px 10px 10px 10px;
+  font-size: 1rem;
+}
 
+.widget-dnd>switch {
+  background: shade(@noti-bg-darker, 2.5);
+  border: none;
+  box-shadow: none;
+}
 
+.widget-dnd>switch:checked {
+  background: @magenta-base;
+}
+
+.widget-dnd>switch slider {
+  background: @text-color;
+  box-shadow: none;
+}
 
 .widget-mpris {
   color: @text-color;

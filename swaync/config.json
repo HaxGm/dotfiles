@@ -24,12 +24,13 @@
   "text-empty": "No Notification",
   "scripts": {
     "sound-script": {
-      "exec": "pw-play notification.ogg",
+      "exec": "/home/piotr/Coding/dotfiles/swaync/notification-sound.sh",
       "app-name": ".*"
     }
   },
   "widgets": [
     "title",
+    "dnd",
     "mpris"
   ],
   "widget-config": {
@@ -37,6 +38,9 @@
       "text": "Notification Center",
       "clear-all-button": true,
       "button-text": "󰆴 Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
     },
     "mpris": {
       "blacklist": [

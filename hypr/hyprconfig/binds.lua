@@ -75,3 +75,9 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
+
+-- Screenshots 
+hl.bind("PRINT",                        hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))                             -- Region select → clipboard
+hl.bind(mainMod .. " + PRINT",          hl.dsp.exec_cmd("grim - | wl-copy"))                                             -- Full screen → clipboard
+hl.bind(mainMod .. " + SHIFT + PRINT",  hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))       -- Full screen → file

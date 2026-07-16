@@ -1,17 +1,12 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
+ * Rofi Theme - GitHub Dark
  **/
 
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "";
+    display-drun:               "";
 	drun-display-format:        "{name}";
 }
 
@@ -32,9 +27,9 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
+    border:                      1px solid;
+    border-radius:               16px;
+    border-color:                #6e768166;
     background-color:            @background;
     cursor:                      "default";
 }
@@ -46,7 +41,7 @@ mainbox {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               16px;
     border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
@@ -57,10 +52,10 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     12px;
-    border:                      2px solid;
-    border-radius:               0px;
-    border-color:                #58a6ff80;
+    padding:                     12px 14px;
+    border:                      1px solid;
+    border-radius:               16px;
+    border-color:                #6e768166;
     background-color:            @background;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
@@ -84,7 +79,7 @@ entry {
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
-    placeholder-color:           inherit;
+    placeholder-color:           #6e7681FF;
 }
 
 /*****----- Listview -----*****/
@@ -104,17 +99,11 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               16px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
-}
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @selected;
-    border-radius:               0px;
-    background-color:            @background-alt;
 }
 
 /*****----- Elements -----*****/
@@ -124,7 +113,7 @@ element {
     margin:                      0px;
     padding:                     20px 10px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               16px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -136,11 +125,11 @@ element normal.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    border:                      2px solid;
-    border-radius:               0px;
-    border-color:                #58a6ff80;
-    background-color:            @background;
-    text-color:                  @foreground;
+    border:                      1px solid;
+    border-radius:               16px;
+    border-color:                #79c0ffB3;
+    background-color:            #0d2240;
+    text-color:                  #79c0ffFF;
 }
 element-icon {
     background-color:            transparent;
@@ -160,9 +149,9 @@ element-text {
 /*****----- Message -----*****/
 error-message {
     padding:                     10px;
-    border:                      2px solid;
-    border-radius:               0px;
-    border-color:                #58a6ff80;
+    border:                      1px solid;
+    border-radius:               16px;
+    border-color:                #6e768166;
     background-color:            black / 10%;
     text-color:                  @foreground;
 }

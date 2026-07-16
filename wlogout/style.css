@@ -3,6 +3,8 @@
 * {
 	background-image: none;
 	box-shadow: none;
+	font-family: "AdwaitaMono Nerd Font Mono", monospace;
+	font-size: 14px;
 }
 
 window {
@@ -10,20 +12,21 @@ window {
 }
 
 button {
-    border-radius: 0;
-    border-color: @normal_black;
+    border-radius: 16px;
+    border: 1px solid alpha(@bright_black, 0.6);
 	text-decoration-color: @primary_foreground;
     color: @primary_foreground;
 	background-color: @primary_background;
-	border-style: solid;
-	border-width: 1px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+	margin: 10px;
+	transition: all 0.3s ease;
 }
 
 button:focus, button:active, button:hover {
-	background-color: @selection_background;
+	background-color: #161b22;
+	border-color: alpha(@bright_blue, 0.7);
 	outline-style: none;
 }
 

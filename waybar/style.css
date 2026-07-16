@@ -8,7 +8,7 @@
 
 /* Window */
 window#waybar {
-    background-color: @primary_background;
+    background-color: transparent;
     color: @primary_foreground;
     border-radius: 0;
     border: none;
@@ -35,28 +35,29 @@ tooltip,
 #tray {
     padding: 4px 14px;
     margin: 4px 3px 6px;
-    border-radius: 12px;
-    border: 1px solid;
-    background: alpha(@normal_black, 0.15);
+    border-radius: 16px;
+    border: 1px solid alpha(@bright_black, 0.6);
+    background: @primary_background;
     transition: all 0.3s ease;
 }
 
 
 /* Tray */
 #tray {
-    border-color: alpha(@normal_white, 0.5);
+    border-color: alpha(@bright_black, 0.6);
 }
 
 /* Arch Button */
 #custom-arch {
     font-size: 16px;
     color: @bright_blue;
-    background-color: alpha(@normal_blue, 0.10);
-    border-color: alpha(@normal_blue, 0.5);
+    background-color: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #custom-arch:hover {
-    background: alpha(@bright_blue, 0.22);
+    background: #161b22;
+    border-color: alpha(@bright_blue, 0.5);
 }
 
 
@@ -68,19 +69,22 @@ tooltip,
 #workspaces button {
     padding: 4px 15px;
     margin: 2px 2px;
-    border-radius: 10px;
-    background: alpha(@normal_black, 0.22);
+    border-radius: 16px;
+    border: 1px solid alpha(@bright_black, 0.6);
+    background: @primary_background;
     color: @normal_white;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    background: alpha(@selection_background, 0.45);
+    background: #1c2128;
+    border-color: alpha(@bright_blue, 0.5);
     color: @bright_blue;
 }
 
 #workspaces button:hover {
-    background: alpha(@selection_background, 0.35);
+    background: #161b22;
+    border-color: alpha(@normal_white, 0.4);
     color: @bright_blue;
 }
 
@@ -93,46 +97,49 @@ tooltip,
 /* Clock */
 #clock {
     color: @bright_cyan;
-    border-color: alpha(@normal_cyan, 0.5);
-    background-color: alpha(@normal_cyan, 0.10);
+    border-color: alpha(@bright_black, 0.6);
+    background-color: @primary_background;
 }
 
 #clock:hover {
-    background: alpha(@bright_cyan, 0.22);
+    background: #161b22;
+    border-color: alpha(@bright_cyan, 0.5);
 }
 
 
 /* Battery */
 #battery {
     color: @normal_green;
-    border-color: alpha(@normal_green, 0.5);
-    background-color: alpha(@normal_green, 0.10);
+    border-color: alpha(@bright_black, 0.6);
+    background-color: @primary_background;
 }
 
 #battery:hover {
-    background: alpha(@normal_green, 0.22);
+    background: #161b22;
+    border-color: alpha(@normal_green, 0.5);
 }
 
 #battery.full {
     color: @normal_cyan;
-    background: alpha(@normal_cyan, 0.10);
-    border-color: alpha(@normal_cyan, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #battery.full:hover {
-    background: alpha(@normal_cyan, 0.22);
+    background: #161b22;
+    border-color: alpha(@normal_cyan, 0.5);
 }
 
 #battery.warning:not(.charging) {
     color: @bright_yellow;
-    background: alpha(@normal_yellow, 0.12);
-    border-color: alpha(@normal_yellow, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #battery.critical:not(.charging) {
     color: @normal_red;
-    background: alpha(@normal_red, 0.10);
-    border-color: alpha(@normal_red, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
     animation: pulse 1.5s ease-in-out infinite;
 }
 
@@ -140,36 +147,39 @@ tooltip,
 /* Wireplumber */
 #wireplumber {
     color: @bright_magenta;
-    background: alpha(@normal_magenta, 0.10);
-    border-color: alpha(@normal_magenta, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #wireplumber:hover {
-    background: alpha(@bright_magenta, 0.22);
+    background: #161b22;
+    border-color: alpha(@bright_magenta, 0.5);
 }
 
 
 /* Network */
 #network {
     color: @bright_cyan;
-    background: alpha(@normal_cyan, 0.10);
-    border-color: alpha(@normal_cyan, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #network:hover {
-    background: alpha(@bright_cyan, 0.22);
+    background: #161b22;
+    border-color: alpha(@bright_cyan, 0.5);
 }
 
 
 /* Bluetooth */
 #bluetooth {
     color: @bright_yellow;
-    background: alpha(@normal_yellow, 0.10);
-    border-color: alpha(@normal_yellow, 0.5);
+    background: @primary_background;
+    border-color: alpha(@bright_black, 0.6);
 }
 
 #bluetooth:hover {
-    background: alpha(@bright_yellow, 0.22);
+    background: #161b22;
+    border-color: alpha(@bright_yellow, 0.5);
 }
 
 

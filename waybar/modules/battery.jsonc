@@ -1,6 +1,11 @@
 {
     "battery": {
         "interval": 60,
+        // Drives the #battery.warning / #battery.critical rules in style.css
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
         "format": "{icon} {capacity}%",
         "format-icons": {
             "default": [

@@ -22,6 +22,14 @@ tooltip,
     background-color: @primary_background; /* Dark background */
     border: 2px solid alpha(@selection_background, 0.7); /* Selection-tinted border */
     box-shadow: alpha(@primary_background, 0.8) 2px 2px 5px 2px; /* Deep shadow */
+    color: @primary_foreground;
+}
+
+/* These are separate toplevels, so they don't inherit window#waybar's color.
+   Without this `all: unset` above leaves the text black on a black background. */
+tooltip label,
+#tray menu menuitem {
+    color: @primary_foreground;
 }
 
 

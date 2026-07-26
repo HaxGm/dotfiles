@@ -11,11 +11,7 @@ setopt AUTO_CD
 
 # Basic autocomplete
 autoload -Uz compinit
-if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-  compinit
-else
-  compinit -C
-fi
+compinit
 
 
 # This enables a selectable menu when you press Tab multiple times

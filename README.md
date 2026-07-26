@@ -31,7 +31,9 @@ cd dotfiles
 
 Everything is symlinked, so edits in the repo take effect immediately. The
 script is re-runnable; anything already in the way is moved to
-`~/.dotfiles-backup/<timestamp>/` rather than overwritten.
+`~/.dotfiles-backup/<timestamp>/` rather than overwritten. It also creates
+`~/Pictures/Screenshots`, since `grim` won't write into a directory that
+doesn't exist.
 
 If you **move the repo** after installing, the existing symlinks will dangle —
 just re-run `./install.sh` from the new location and they get repointed (the
@@ -41,22 +43,29 @@ stale links are swept into the backup folder).
 
 ```sh
 pacman -S hyprland hyprlock hypridle hyprpolkitagent xdg-desktop-portal-hyprland \
-          waybar swaync rofi wlogout kitty neovim starship fastfetch awww \
+          waybar swaync rofi kitty neovim starship fastfetch awww \
           zsh zsh-autosuggestions zsh-syntax-highlighting \
-          pipewire wireplumber pwvucontrol networkmanager nm-connection-editor \
+          pipewire wireplumber networkmanager nm-connection-editor \
           blueman nautilus qt6ct libnotify \
           grim slurp wl-clipboard brightnessctl playerctl clang
 ```
 
-Two things `pacman` can't provide:
+`wlogout` and `pwvucontrol` are only on the AUR, so they need a helper:
+
+```sh
+yay -S wlogout pwvucontrol
+```
+
+Two things no package manager can provide:
 
 - **AdwaitaMono Nerd Font** — every config references it by name. Not in the
-  repos; download `AdwaitaMono.zip` from the
-  [nerd-fonts releases](https://github.com/ryanoasis/nerd-fonts/releases),
-  unzip into `~/.local/share/fonts/`, then `fc-cache -f`. Without it every
+  repos; download it from [nerd-fonts](https://www.nerdfonts.com), unzip into
+  `~/.local/share/fonts/`, then `fc-cache -f`. Without it every
   glyph in the bar, prompt and launcher renders as a box.
-- **Lockscreen wallpaper** — `hypr/hyprlock.conf` points at
-  `~/Pictures/Wallpapers/cyberpunk-city.jpeg`. Supply your own or edit the path.
+- **Wallpapers** — the desktop one is set by hand, see
+  [Wallpaper](#wallpaper) below. The lockscreen one is a path in
+  `hypr/hyprlock.conf`: `~/Pictures/Wallpapers/cyberpunk-city.jpeg`. Supply
+  your own or edit the path.
 
 ## Layout
 
@@ -84,6 +93,19 @@ swaync and wlogout all `@import "../colors/palette.css"`. It is deployed to
 Non-GTK apps keep their own copy of the same palette in their own format:
 `kitty/colors/colors.conf` and `rofi/colors/github-dark.rasi`.
 
+### Wallpaper
+
+No wallpaper is set anywhere in this repo. `autostart.lua` only starts
+`awww-daemon`; you pick the image yourself:
+
+```sh
+awww img ~/Pictures/Wallpapers/whatever.jpeg
+```
+
+The daemon caches that choice per output in `~/.cache/awww/` and redisplays it
+on the next login, so this survives reboots without anything being committed.
+Until you run it the first time the desktop is black.
+
 ## Keybinds
 
 `SUPER` is the modifier. Full list in `hypr/hyprconfig/binds.lua`.
@@ -99,10 +121,14 @@ Non-GTK apps keep their own copy of the same palette in their own format:
 | `SUPER` + `T` | Restart bar + notifications |
 | `SUPER` + `L` | Lock |
 | `SUPER` + `N` | Logout menu |
+| `SUPER` + `M` | Exit Hyprland |
+| `SUPER` + arrows | Move focus |
 | `SUPER` + `1..0` | Switch workspace |
 | `SUPER` + `SHIFT` + `1..0` | Move window to workspace |
 | `SUPER` + `S` | Scratchpad |
+| `SUPER` + `SHIFT` + `S` | Move window to scratchpad |
 | `PRINT` | Region screenshot → clipboard |
+| `SUPER` + `PRINT` | Fullscreen → clipboard |
 | `SUPER` + `SHIFT` + `PRINT` | Fullscreen → `~/Pictures/Screenshots` |
 
 ## Editing the Hyprland config

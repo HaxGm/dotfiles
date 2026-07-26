@@ -26,7 +26,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(statusBar))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen)) 
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(logout))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + M", hl.dsp.exit())
 
 -- Window management
 hl.bind(mainMod .. " + W", hl.dsp.window.close())

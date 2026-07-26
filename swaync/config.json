@@ -24,7 +24,7 @@
   "text-empty": "No Notification",
   "scripts": {
     "sound-script": {
-      "exec": "/home/piotr/Coding/dotfiles/swaync/notification-sound.sh",
+      "exec": "$HOME/.config/swaync/notification-sound.sh",
       "app-name": ".*"
     }
   },

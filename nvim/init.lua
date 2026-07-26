@@ -1,3 +1,8 @@
+-- Only options that differ from Neovim's defaults are set here. hlsearch,
+-- incsearch, wildmenu, autoread and hidden are already on out of the box.
+
+vim.g.mapleader = ' '             -- Space as <leader>; must be set before any mapping
+
 -- Basic Settings
 vim.opt.number = true             -- Show line numbers
 vim.opt.relativenumber = true     -- Relative line numbers
@@ -12,18 +17,11 @@ vim.opt.clipboard = 'unnamedplus' -- Sync with system clipboard
 -- Search
 vim.opt.ignorecase = true         -- Case-insensitive search
 vim.opt.smartcase = true          -- But case-sensitive if search has caps
-vim.opt.incsearch = true          -- Show matches as you type
-vim.opt.hlsearch = true           -- Highlight matches
 
 -- UI Improvements
 vim.opt.showmatch = true          -- Highlight matching parentheses
 vim.opt.cursorline = true         -- Highlight current line
-vim.opt.wildmenu = true           -- Better command-line completion
 vim.opt.wildmode = 'longest:full,full'
-
--- File Handling
-vim.opt.autoread = true           -- Reload files changed outside vim
-vim.opt.hidden = true             -- Allow buffer switching without saving
 
 -- UX & Performance
 vim.opt.termguicolors = true      -- Enable TrueColor support

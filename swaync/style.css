@@ -1,4 +1,4 @@
-@import "../waybar/colors/palette.css";
+@import "../colors/palette.css";
 
 @define-color cc-bg @primary_background;
 @define-color noti-bg #0d1117;

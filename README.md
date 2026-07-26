@@ -39,6 +39,11 @@ If you **move the repo** after installing, the existing symlinks will dangle —
 just re-run `./install.sh` from the new location and they get repointed (the
 stale links are swept into the backup folder).
 
+One thing worth editing straight away: `hypr/hyprconfig/monitors.lua` describes
+this laptop's panel (`eDP-1`, 1920x1200, scale 1.25). Run `hyprctl monitors` for
+your own output names. Anything not listed there falls back to a catch-all rule
+at its preferred mode.
+
 ## Dependencies
 
 ```sh
@@ -76,10 +81,10 @@ hypr/            hyprland.lua + hyprconfig/*.lua, hyprlock, hypridle
 hyprpolkitagent/ polkit dialog sizing
 kitty/           kitty.conf + colour scheme
 nvim/            single-file init.lua, no plugins
-rofi/            launcher script, theme, colour schemes
+rofi/            launcher script, theme, colour schemes, shared imports
 swaync/          notification centre config, style, sound script
 waybar/          config.jsonc + one file per module, style, launch script
-wlogout/         layout, style, icons
+wlogout/         layout, style, icons + the svgs they came from
 starship.toml    prompt
 .zshrc           shell
 ```
@@ -136,3 +141,9 @@ Until you run it the first time the desktop is black.
 The config is Lua, not hyprlang. `hypr/.vscode/settings.json` points at
 `/usr/share/hypr/stubs` so editors get completion on the `hl.*` API.
 `hyprctl configerrors` reports problems in the running compositor.
+
+## License
+
+MIT, except the wlogout icons in `wlogout/assets` and `wlogout/icons` — those
+are third-party and Creative Commons 3.0, attributed in
+`wlogout/assets/CREDIT.md`. See [LICENSE](LICENSE).

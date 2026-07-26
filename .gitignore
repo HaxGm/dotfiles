@@ -1,0 +1,8 @@
+# Editor and OS noise
+*.swp
+*~
+.DS_Store
+
+# zsh writes these next to the configs it is symlinked from
+.zsh_history
+.zcompdump*

@@ -44,7 +44,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-# Added by Antigravity CLI installer
+# Locally installed binaries take precedence
 export PATH="$HOME/.local/bin:$PATH"
 
 

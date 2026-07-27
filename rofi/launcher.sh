@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
+#
+# Toggle the app launcher: pressing the bind again while rofi is up closes it
+# instead of stacking a second instance.
 
-dir="$HOME/.config/rofi"
-theme='style'
+# Resolve through the ~/.config/rofi symlink to wherever this repo lives.
+dir="$(dirname "$(readlink -f "$0")")"
 
-## Run
-pkill -x rofi || rofi \
-    -show drun \
-    -theme "${dir}/${theme}.rasi"
+pkill -x rofi || exec rofi -show drun -theme "$dir/style.rasi"

@@ -1,12 +1,3 @@
-The MIT License below covers the configuration in this repository.
-
-It does NOT cover the wlogout icons in `wlogout/assets/` and `wlogout/icons/`,
-which are third-party work from onlinewebfonts licensed under Creative Commons
-3.0 and require attribution. See `wlogout/assets/CREDIT.md` for the per-icon
-sources.
-
----
-
 MIT License
 
 Copyright (c) 2026 Piotr Lik

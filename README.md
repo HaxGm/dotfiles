@@ -71,6 +71,10 @@ Two things no package manager can provide:
   [Wallpaper](#wallpaper) below. The lockscreen one is a path in
   `hypr/hyprlock.conf`: `~/Pictures/Wallpapers/cyberpunk-city.jpeg`. Supply
   your own or edit the path.
+- **Notification sound** — `swaync/notification-sound.sh` plays
+  `swaync/notification.ogg`, which is not committed. Drop any ogg of that name
+  next to the script to get a sound; without it notifications are silent and
+  nothing breaks.
 
 ## Layout
 
@@ -81,7 +85,7 @@ hypr/            hyprland.lua + hyprconfig/*.lua, hyprlock, hypridle
 hyprpolkitagent/ polkit dialog sizing
 kitty/           kitty.conf + colour scheme
 nvim/            single-file init.lua, no plugins
-rofi/            launcher script, theme, colour schemes, shared imports
+rofi/            launcher script, theme, colour scheme, shared imports
 swaync/          notification centre config, style, sound script
 waybar/          config.jsonc + one file per module, style, launch script
 wlogout/         layout, style, icons + the svgs they came from
@@ -138,12 +142,18 @@ Until you run it the first time the desktop is black.
 
 ## Editing the Hyprland config
 
-The config is Lua, not hyprlang. `hypr/.vscode/settings.json` points at
-`/usr/share/hypr/stubs` so editors get completion on the `hl.*` API.
+The config is Lua, not hyprlang. For completion on the `hl.*` API, point your
+editor's Lua language server at the stubs Hyprland ships — in VS Code that is a
+`hypr/.vscode/settings.json` containing:
+
+```json
+{ "Lua.workspace.library": [ "/usr/share/hypr/stubs" ] }
+```
+
 `hyprctl configerrors` reports problems in the running compositor.
 
 ## License
 
 MIT, except the wlogout icons in `wlogout/assets` and `wlogout/icons` — those
-are third-party and Creative Commons 3.0, attributed in
-`wlogout/assets/CREDIT.md`. See [LICENSE](LICENSE).
+are third-party and CC BY 3.0, attributed in `wlogout/assets/CREDIT.md`. See
+[LICENSE](LICENSE).

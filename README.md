@@ -15,6 +15,22 @@ Hyprland desktop on Arch, themed after **GitHub Dark**.
 | Logout | wlogout |
 | Wallpaper | awww |
 
+## Screenshots
+
+![Desktop](screenshots/desktop.png)
+
+Bare desktop — waybar across the top: workspaces on the left, clock centred,
+audio / bluetooth / network / battery / tray on the right.
+
+| | |
+|---|---|
+| ![Rofi](screenshots/rofi.png) | ![SwayNC](screenshots/swaync.png) |
+| Rofi launcher, icon grid | SwayNC notification centre |
+| ![Terminal](screenshots/terminal.png) | ![wlogout](screenshots/wlogout.png) |
+| kitty split, starship prompt, fastfetch | wlogout menu |
+
+The wallpaper is not part of the repo — see [Wallpaper](#wallpaper).
+
 ## Install
 
 Clone it wherever you like — the location is not baked in anywhere.
@@ -86,6 +102,7 @@ hyprpolkitagent/ polkit dialog sizing
 kitty/           kitty.conf + colour scheme
 nvim/            single-file init.lua, no plugins
 rofi/            launcher script, theme, colour scheme, shared imports
+screenshots/     the images in the README
 swaync/          notification centre config, style, sound script
 waybar/          config.jsonc + one file per module, style, launch script
 wlogout/         layout, style, icons + the svgs they came from

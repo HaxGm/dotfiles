@@ -10,7 +10,6 @@ Hyprland desktop on Arch, themed after **GitHub Dark**.
 | Launcher | Rofi |
 | Terminal | kitty |
 | Shell | zsh + starship |
-| Editor | Neovim |
 | Lock / idle | hyprlock, hypridle |
 | Logout | wlogout |
 | Wallpaper | awww |
@@ -105,7 +104,6 @@ fastfetch/       fastfetch config + arch ascii
 hypr/            hyprland.lua + hyprconfig/*.lua, hyprlock, hypridle
 hyprpolkitagent/ polkit dialog sizing
 kitty/           kitty.conf + colour scheme
-nvim/            single-file init.lua, no plugins
 rofi/            launcher script, theme, colour scheme, shared imports
 screenshots/     the images in the README
 swaync/          notification centre config, style, sound script

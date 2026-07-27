@@ -21,7 +21,6 @@ config_dirs=(
     hypr
     hyprpolkitagent
     kitty
-    nvim
     rofi
     swaync
     waybar

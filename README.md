@@ -68,7 +68,7 @@ at its preferred mode.
 pacman -S hyprland hyprlock hypridle hyprpolkitagent xdg-desktop-portal-hyprland \
           waybar swaync rofi kitty neovim starship fastfetch awww \
           zsh zsh-autosuggestions zsh-syntax-highlighting \
-          pipewire wireplumber networkmanager nm-connection-editor \
+          pipewire wireplumber networkmanager nm-connection-editor networkmanager-dmenu \
           blueman nautilus libnotify \
           qt6ct kvantum nwg-look \
           adwaita-fonts adwaita-icon-theme adwaita-cursors \

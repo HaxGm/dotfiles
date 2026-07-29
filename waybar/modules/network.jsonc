@@ -9,7 +9,8 @@
         "tooltip-format-wifi": "SSID: {essid} Strength: {signalStrength}%",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "nm-connection-editor",
+        "on-click": "networkmanager_dmenu",
+        "on-click-right": "nm-connection-editor",
         "max-length": 50
     }
 }

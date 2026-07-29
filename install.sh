@@ -21,6 +21,7 @@ config_dirs=(
     hypr
     hyprpolkitagent
     kitty
+    networkmanager-dmenu
     rofi
     swaync
     waybar

@@ -35,7 +35,7 @@ The wallpaper is not part of the repo — see [Wallpaper](#wallpaper).
 
 ## Install
 
-Clone it wherever you like — the location is doesn't matter.
+Clone it wherever you like — the location doesn't matter.
 
 ```sh
 git clone <this repo> dotfiles
@@ -93,7 +93,7 @@ A few things no package manager can provide:
   your own or edit the path.
 - **Notification sound** — `swaync/notification-sound.sh` plays
   `swaync/notification.ogg`, which is not committed. Drop any ogg of that name
-  next to the script to get a sound; without it notifications are silent and
+  next to the script to get a sound; without it notifications are silent, but
   nothing breaks.
 
 ## Layout
@@ -209,17 +209,6 @@ Until you run it the first time the desktop is black.
 | `SUPER` + `PRINT` | Fullscreen → clipboard |
 | `SUPER` + `SHIFT` + `PRINT` | Fullscreen → `~/Pictures/Screenshots` |
 
-## Editing the Hyprland config
-
-The config is Lua, not hyprlang. For completion on the `hl.*` API, point your
-editor's Lua language server at the stubs Hyprland ships — in VS Code that is a
-`hypr/.vscode/settings.json` containing:
-
-```json
-{ "Lua.workspace.library": [ "/usr/share/hypr/stubs" ] }
-```
-
-`hyprctl configerrors` reports problems in the running compositor.
 
 ## License
 

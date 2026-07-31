@@ -10,9 +10,17 @@ setopt SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE
 setopt AUTO_CD
 
 
-# Basic autocomplete
+# Basic autocomplete. Rebuilding the dump and rescanning for insecure
+# directories is the slowest part of startup, so do it once a day at most;
+# -C reuses the existing dump and skips the scan.
 autoload -Uz compinit
-compinit
+_zcompdump_stale=($HOME/.zcompdump(N.mh+24))   # empty unless older than 24h
+if (( $#_zcompdump_stale )); then
+    compinit
+else
+    compinit -C
+fi
+unset _zcompdump_stale
 
 
 # This enables a selectable menu when you press Tab multiple times
@@ -37,12 +45,13 @@ export GPG_TTY=$(tty)
 
 
 # Plugins
-
-# Autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-
-# Syntax Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+for _plugin in \
+    /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh \
+    /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+do
+    [[ -r $_plugin ]] && source $_plugin
+done
+unset _plugin
 
 
 # Locally installed binaries take precedence

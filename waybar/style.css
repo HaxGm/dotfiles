@@ -47,7 +47,7 @@ tooltip label,
     border-radius: 16px;
     border: 1px solid @border_subtle;
     background: @primary_background;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 /* Shared hover fill; each module tints its own border below. */
@@ -73,7 +73,7 @@ tooltip label,
     border: 1px solid @border_subtle;
     background: @primary_background;
     color: @normal_white;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 #workspaces button.active {

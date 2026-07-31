@@ -1,68 +1,18 @@
 /*
- * Rofi — network picker
+ * Rofi — network picker.
  */
 
-@import "shared/colors.rasi"
-@import "shared/fonts.rasi"
+@import "shared/base.rasi"
 
-/* Narrower than the launcher */
 window {
-    transparency: "real";
-    location: center;
-    anchor: center;
-    fullscreen: false;
     width: 500px;
-    x-offset: 0px;
-    y-offset: 0px;
-    margin: 0px;
-    padding: 0px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: @background;
-    cursor: "default";
 }
 
-mainbox {
-    children: [ "inputbar", "listview" ];
-    spacing: 10px;
-    margin: 0px;
-    padding: 10px;
-    border: 0px solid;
-    border-radius: 16px;
-    border-color: @selected;
-    background-color: transparent;
-}
-
-inputbar {
-    children: [ "prompt", "entry" ];
-    spacing: 10px;
-    margin: 0px;
-    padding: 12px 14px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: @background;
-    text-color: @foreground;
-}
-
-/* 󰖩 passed as the `prompt` value in config.ini. */
-prompt {
-    background-color: inherit;
-    text-color: inherit;
-}
-
+/* 󰖩 is passed as the `prompt` value in networkmanager-dmenu/config.ini. */
 entry {
     placeholder: "Filter";
-    placeholder-color: @subtle;
-    background-color: inherit;
-    text-color: inherit;
-    cursor: text;
 }
 
-/*
- * dynamic + fixed-height off 
- */
 listview {
     columns: 1;
     lines: 12;
@@ -84,7 +34,6 @@ listview {
     cursor: "default";
 }
 
-
 element {
     orientation: horizontal;
     spacing: 0px;
@@ -96,11 +45,6 @@ element {
     background-color: transparent;
     text-color: @foreground;
     cursor: pointer;
-}
-
-element normal.normal {
-    background-color: transparent;
-    text-color: @foreground;
 }
 
 element alternate.normal {
@@ -140,22 +84,4 @@ element-text {
     text-color: inherit;
     highlight: inherit;
     cursor: inherit;
-}
-
-/* Shown when a mode fails to load */
-error-message {
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: black / 10%;
-    text-color: @foreground;
-}
-
-textbox {
-    horizontal-align: 0.0;
-    vertical-align: 0.5;
-    background-color: transparent;
-    text-color: @foreground;
-    highlight: none;
 }

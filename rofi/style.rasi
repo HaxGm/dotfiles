@@ -1,14 +1,10 @@
 /*
- * Rofi — GitHub Dark
+ * Rofi — GitHub Dark, app launcher.
  *
- * A centred grid launcher: six columns of three, big icons, label under each.
- * Colours come from colors/<scheme>.rasi and the font from shared/fonts.rasi,
- * both pulled in via the shared/ imports below. No hex is hardcoded here —
- * swapping the colour scheme restyles this file completely.
+ * A centred grid launcher
  */
 
-@import "shared/colors.rasi"
-@import "shared/fonts.rasi"
+@import "shared/base.rasi"
 
 configuration {
     modi: "drun";
@@ -17,60 +13,12 @@ configuration {
     drun-display-format: "{name}";
 }
 
-/* Outer window. 750px wide, centred, hairline border on a rounded corner. */
 window {
-    transparency: "real";
-    location: center;
-    anchor: center;
-    fullscreen: false;
     width: 750px;
-    x-offset: 0px;
-    y-offset: 0px;
-    margin: 0px;
-    padding: 0px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: @background;
-    cursor: "default";
-}
-
-/* Search box on top, grid underneath, 10px of air between and around. */
-mainbox {
-    children: [ "inputbar", "listview" ];
-    spacing: 10px;
-    margin: 0px;
-    padding: 10px;
-    border: 0px solid;
-    border-radius: 16px;
-    border-color: @selected;
-    background-color: transparent;
-}
-
-inputbar {
-    children: [ "prompt", "entry" ];
-    spacing: 10px;
-    margin: 0px;
-    padding: 12px 14px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: @background;
-    text-color: @foreground;
-}
-
-/* The magnifier glyph from display-drun. */
-prompt {
-    background-color: inherit;
-    text-color: inherit;
 }
 
 entry {
     placeholder: "Search";
-    placeholder-color: @subtle;
-    background-color: inherit;
-    text-color: inherit;
-    cursor: text;
 }
 
 /*
@@ -112,11 +60,6 @@ element {
     cursor: pointer;
 }
 
-element normal.normal {
-    background-color: transparent;
-    text-color: @foreground;
-}
-
 /* Selection: blue-tinted fill, brighter blue border and label. */
 element selected.normal {
     border: 1px solid;
@@ -140,22 +83,4 @@ element-text {
     text-color: inherit;
     highlight: inherit;
     cursor: inherit;
-}
-
-/* Shown when a mode fails to load; matches the inputbar's frame. */
-error-message {
-    padding: 10px;
-    border: 1px solid;
-    border-radius: 16px;
-    border-color: @subtle-border;
-    background-color: black / 10%;
-    text-color: @foreground;
-}
-
-textbox {
-    horizontal-align: 0.0;
-    vertical-align: 0.5;
-    background-color: transparent;
-    text-color: @foreground;
-    highlight: none;
 }

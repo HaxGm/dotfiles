@@ -24,7 +24,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(notificationCenter))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(statusBar))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen)) 
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(logout))
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 
@@ -77,7 +77,7 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 
--- Screenshots 
+-- Screenshots
 hl.bind("PRINT",                        hl.dsp.exec_cmd([[g=$(slurp) && grim -g "$g" - | wl-copy]]))                    -- Region select → clipboard
 hl.bind(mainMod .. " + PRINT",          hl.dsp.exec_cmd("grim - | wl-copy"))                                             -- Full screen → clipboard
 hl.bind(mainMod .. " + SHIFT + PRINT",  hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))       -- Full screen → file

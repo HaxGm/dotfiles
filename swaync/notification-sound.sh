@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Resolve through the ~/.config/swaync symlink to wherever this repo actually
 # lives, so the sound is found no matter where it's checked out.

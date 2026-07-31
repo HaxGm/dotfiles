@@ -8,7 +8,7 @@ hl.env("HYPRCURSOR_SIZE", "20")
 
 -- Toolkit backend variables
 hl.env("GDK_BACKEND", "wayland,x11,*")      -- use wayland with x11 fallback
-hl.env("QT_QPA_PLATFORM", "wayland;xcb")    
+hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("SDL_VIDEODRIVER", "wayland")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 

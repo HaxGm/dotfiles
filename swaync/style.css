@@ -1,9 +1,9 @@
 @import "../colors/palette.css";
 
 @define-color cc-bg @primary_background;
-@define-color noti-bg @surface;
-@define-color noti-bg-hover @surface_hover;
-@define-color noti-border @border_subtle;
+@define-color widget-bg @surface;
+@define-color hover-bg @surface_hover;
+@define-color border @border_subtle;
 @define-color text-color @primary_foreground;
 @define-color text-color-disabled @bright_black;
 
@@ -30,7 +30,7 @@ scrollbar,
 
 .notification {
   background: @cc-bg;
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
   border-radius: 16px;
   margin: 6px;
   padding: 0;
@@ -72,12 +72,12 @@ scrollbar,
 /* ── Notification actions ── */
 
 .notification-action {
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  background: @noti-bg-hover;
+  background: @hover-bg;
   color: @bright_cyan;
 }
 
@@ -87,7 +87,7 @@ scrollbar,
 }
 
 .notification-action>button:hover {
-  background-color: @noti-bg-hover;
+  background-color: @hover-bg;
   color: @bright_cyan;
 }
 
@@ -95,18 +95,18 @@ scrollbar,
 /* ── Inline reply ── */
 
 .inline-reply-entry {
-  background: @noti-bg;
+  background: @widget-bg;
   color: @text-color;
   caret-color: @text-color;
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
   border-radius: 16px;
 }
 
 .inline-reply-button {
   margin-top: 4px;
   margin-left: 4px;
-  background: @noti-bg;
-  border: 1px solid @noti-border;
+  background: @widget-bg;
+  border: 1px solid @border;
   border-radius: 16px;
   color: @text-color;
 }
@@ -118,7 +118,7 @@ scrollbar,
 }
 
 .inline-reply-button:hover {
-  background: @noti-bg-hover;
+  background: @hover-bg;
   border-color: alpha(@bright_cyan, 0.5);
 }
 
@@ -155,7 +155,7 @@ scrollbar,
 
 .control-center {
   background: @cc-bg;
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
   border-radius: 16px;
   padding: 10px;
 }
@@ -163,7 +163,7 @@ scrollbar,
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
   opacity: 1;
-  background: @noti-bg-hover;
+  background: @hover-bg;
   border-radius: 16px;
 }
 
@@ -172,8 +172,8 @@ scrollbar,
 
 .widget-title {
   color: @bright_magenta;
-  background: @noti-bg;
-  border: 1px solid @noti-border;
+  background: @widget-bg;
+  border: 1px solid @border;
   border-radius: 16px;
   padding: 8px 14px;
   margin: 6px;
@@ -186,13 +186,13 @@ scrollbar,
   background: @cc-bg;
   border-radius: 16px;
   box-shadow: none;
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
   padding: 4px 14px;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .widget-title>button:hover {
-  background: @noti-bg-hover;
+  background: @hover-bg;
   border-color: alpha(@bright_magenta, 0.5);
   color: @bright_magenta;
 }
@@ -202,8 +202,8 @@ scrollbar,
 
 .widget-dnd {
   color: @text-color;
-  background: @noti-bg;
-  border: 1px solid @noti-border;
+  background: @widget-bg;
+  border: 1px solid @border;
   border-radius: 16px;
   padding: 8px 14px;
   margin: 0px 6px 6px 6px;
@@ -212,7 +212,7 @@ scrollbar,
 
 .widget-dnd>switch {
   background: @cc-bg;
-  border: 1px solid @noti-border;
+  border: 1px solid @border;
   border-radius: 16px;
   box-shadow: none;
 }
@@ -232,8 +232,8 @@ scrollbar,
 
 .widget-mpris {
   color: @text-color;
-  background: @noti-bg;
-  border: 1px solid @noti-border;
+  background: @widget-bg;
+  border: 1px solid @border;
   border-radius: 16px;
   margin: 0px 6px 6px 6px;
   box-shadow: none;

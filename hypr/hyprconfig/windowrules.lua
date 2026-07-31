@@ -3,7 +3,7 @@
 --------------------------------
 
 
-local suppressMaximizeRule = hl.window_rule({   
+local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
     -- Made into variable for easy toggling on-off
     name  = "suppress-maximize-events",
@@ -29,7 +29,7 @@ hl.window_rule({
 })
 
 
--- rofi 
+-- rofi
 hl.layer_rule({
     match = { namespace = "rofi"},
     name = "rofi-popup",
@@ -37,7 +37,7 @@ hl.layer_rule({
     dim_around = true
 })
 
--- swaync 
+-- swaync
 hl.layer_rule({
     match = { namespace = "swaync-control-center"},
     name = "notification-animation",

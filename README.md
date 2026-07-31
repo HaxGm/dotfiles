@@ -21,8 +21,8 @@ Hyprland desktop on Arch, themed after **GitHub Dark**.
 
 ![Desktop](screenshots/desktop.png)
 
-Bare desktop — waybar across the top: workspaces on the left, clock centred,
-audio / bluetooth / network / battery / tray on the right.
+Bare desktop — waybar across the top: workspaces and tray on the left, clock
+centred, audio / bluetooth / network / battery on the right.
 
 | | |
 |---|---|
@@ -108,7 +108,7 @@ rofi/            launcher script, theme, colour scheme, shared imports
 screenshots/     the images in the README
 swaync/          notification centre config, style, sound script
 waybar/          config.jsonc + one file per module, style, launch script
-wlogout/         layout, style, icons + the svgs they came from
+wlogout/         layout, style, button icons (svg)
 starship.toml    prompt
 .zshrc           shell
 ```
@@ -195,6 +195,8 @@ Until you run it the first time the desktop is black.
 | `SUPER` + `E` | Files |
 | `SUPER` + `W` | Close window |
 | `SUPER` + `V` | Toggle floating |
+| `SUPER` + `P` | Toggle pseudo-tile |
+| `SUPER` + `J` | Toggle split direction (dwindle) |
 | `SUPER` + `Q` | Notification centre |
 | `SUPER` + `T` | Restart bar + notifications |
 | `SUPER` + `L` | Lock |
@@ -212,6 +214,5 @@ Until you run it the first time the desktop is black.
 
 ## License
 
-MIT, except the wlogout icons in `wlogout/assets` and `wlogout/icons` — those
-are third-party and CC BY 3.0, attributed in `wlogout/assets/CREDIT.md`. See
-[LICENSE](LICENSE).
+MIT, except the wlogout icons in `wlogout/assets` — those are third-party and
+CC BY 3.0, attributed in `wlogout/assets/CREDIT.md`. See [LICENSE](LICENSE).

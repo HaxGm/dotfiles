@@ -3,7 +3,6 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "Start Menu",
-        "on-click": "wlogout",
-        "interval": "once"
+        "on-click": "wlogout"
     }
 }

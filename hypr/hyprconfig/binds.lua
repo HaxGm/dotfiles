@@ -78,6 +78,6 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 
 -- Screenshots 
-hl.bind("PRINT",                        hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))                             -- Region select → clipboard
+hl.bind("PRINT",                        hl.dsp.exec_cmd([[g=$(slurp) && grim -g "$g" - | wl-copy]]))                    -- Region select → clipboard
 hl.bind(mainMod .. " + PRINT",          hl.dsp.exec_cmd("grim - | wl-copy"))                                             -- Full screen → clipboard
 hl.bind(mainMod .. " + SHIFT + PRINT",  hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))       -- Full screen → file

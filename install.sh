@@ -11,8 +11,17 @@ repo="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
 config="${XDG_CONFIG_HOME:-$HOME/.config}"
 backup="$HOME/.dotfiles-backup/$(date +%Y%m%d_%H%M%S)"
 
+# Anything other than --dry-run is a hard error
 dry_run=false
-[[ "${1:-}" == "--dry-run" ]] && dry_run=true
+case "${1:-}" in
+    "")        ;;
+    --dry-run) dry_run=true ;;
+    *)         printf 'usage: %s [--dry-run]\n' "$(basename "$0")" >&2; exit 2 ;;
+esac
+if [[ $# -gt 1 ]]; then
+    printf 'usage: %s [--dry-run]\n' "$(basename "$0")" >&2
+    exit 2
+fi
 
 # Directories linked into ~/.config
 config_dirs=(

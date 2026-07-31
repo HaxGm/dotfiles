@@ -31,25 +31,25 @@ button:focus, button:active, button:hover {
 }
 
 #lock {
-    background-image: image(url("icons/lock.png"));
+    background-image: image(url("assets/lock.svg"));
 }
 
 #logout {
-    background-image: image(url("icons/logout.png"));
+    background-image: image(url("assets/logout.svg"));
 }
 
 #suspend {
-    background-image: image(url("icons/suspend.png"));
+    background-image: image(url("assets/suspend.svg"));
 }
 
 #hibernate {
-    background-image: image(url("icons/hibernate.png"));
+    background-image: image(url("assets/hibernate.svg"));
 }
 
 #shutdown {
-    background-image: image(url("icons/shutdown.png"));
+    background-image: image(url("assets/shutdown.svg"));
 }
 
 #reboot {
-    background-image: image(url("icons/reboot.png"));
+    background-image: image(url("assets/reboot.svg"));
 }

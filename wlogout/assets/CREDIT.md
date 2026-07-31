@@ -2,6 +2,10 @@
 ## Svg's
 All svgs used to render icons
 
+Modified from the originals: a `fill="#d4bff9"` attribute was added to each
+`<svg>` element so they render in the theme colour instead of black. The
+artwork is unchanged.
+
 [Lock icon](lock.svg) from [onlinewebfonts](https://www.onlinewebfonts.com/icon/312) licensed under CC BY 3.0
 
 [Logout icon](logout.svg) from [onlinewebfonts](https://www.onlinewebfonts.com/icon/248752) licensed under CC BY 3.0

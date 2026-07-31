@@ -2,62 +2,37 @@
 ---- LOOK AND FEEL ----
 -----------------------
 
--- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
+-- Only non-default values are set here; everything omitted (shadows, blur size
+-- and vibrancy, opacities, border_size) already matches Hyprland's defaults.
 hl.config({
     general = {
         gaps_in  = 5,
         gaps_out = 10,
-
-        border_size = 1,
 
         col = {
             active_border   = "rgba(bc8cffaa)",
             inactive_border = "rgba(1e232baa)",
         },
 
-        -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
+        -- Resize windows by clicking and dragging on borders and gaps
         resize_on_border = true,
-
-        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-        allow_tearing = false,
     },
 
     decoration = {
-        rounding       = 10,
-        rounding_power = 2,
-
-        -- Change transparency of focused and unfocused windows
-        active_opacity   = 1.0,
-        inactive_opacity = 1.0,
-
-        shadow = {
-            enabled      = true,
-            range        = 4,
-            render_power = 3,
-            color        = "rgba(1a1a1aee)",
-        },
+        rounding = 10,
 
         blur = {
-            enabled   = true,
-            size      = 8,
-            passes    = 2,
-            vibrancy  = 0.1696,
+            passes = 2,    -- default is 1
         },
-    },
-
-    animations = {
-        enabled = true,
     },
 })
 
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
-hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
 hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 
--- Default springs
+-- Softer than the stock spring (stiffness 238.1191, dampening 24.21279333)
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })

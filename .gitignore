@@ -3,10 +3,6 @@
 *~
 .DS_Store
 
-# zsh writes these next to the configs it is symlinked from
-.zsh_history
-.zcompdump*
-
 # Local-only, not distributed
 .vscode/
 swaync/notification.ogg

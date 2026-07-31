@@ -44,34 +44,11 @@ hl.layer_rule({
     animation = "slide top"
 })
 
--- nmtui-float 
 hl.window_rule({
-    match = { class = "^(nmtui-float)$"},
-    float = true,
-    size = "600 400",
-    center = true
-})
+    name  = "float-settings-dialogs",
+    match = { class = "^(nm-connection-editor|blueman-manager|com\\.saivert\\.pwvucontrol)$" },
 
--- nm-connection-editor
-hl.window_rule({
-    match = { class = "^(nm-connection-editor)$"},
-    float = true,
-    size = "600 400",
-    center = true
-})
-
--- pwvucontrol
-hl.window_rule({
-    match = { class = "^(com\\.saivert\\.pwvucontrol)$"},
-    float = true,
-    size = "600 400",
-    center = true
-})
-
--- blueman-manager
-hl.window_rule({
-    match = { class = "^(blueman-manager)$"},
-    float = true,
-    size = "600 400",
+    float  = true,
+    size   = "600 400",
     center = true
 })

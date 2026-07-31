@@ -1,9 +1,9 @@
 @import "../colors/palette.css";
 
 @define-color cc-bg @primary_background;
-@define-color noti-bg #0d1117;
-@define-color noti-bg-hover #161b22;
-@define-color noti-border alpha(@bright_black, 0.6);
+@define-color noti-bg @surface;
+@define-color noti-bg-hover @surface_hover;
+@define-color noti-border @border_subtle;
 @define-color text-color @primary_foreground;
 @define-color text-color-disabled @bright_black;
 

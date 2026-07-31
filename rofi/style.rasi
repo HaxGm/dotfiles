@@ -3,9 +3,8 @@
  *
  * A centred grid launcher: six columns of three, big icons, label under each.
  * Colours come from colors/<scheme>.rasi and the font from shared/fonts.rasi,
- * both pulled in via the shared/ imports below. Nothing here hardcodes a
- * palette except the few accent shades used for borders and the selection,
- * which have no @named equivalent.
+ * both pulled in via the shared/ imports below. No hex is hardcoded here —
+ * swapping the colour scheme restyles this file completely.
  */
 
 @import "shared/colors.rasi"
@@ -31,7 +30,7 @@ window {
     padding: 0px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: @background;
     cursor: "default";
 }
@@ -55,7 +54,7 @@ inputbar {
     padding: 12px 14px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: @background;
     text-color: @foreground;
 }
@@ -68,7 +67,7 @@ prompt {
 
 entry {
     placeholder: "Search";
-    placeholder-color: #6e7681FF;
+    placeholder-color: @subtle;
     background-color: inherit;
     text-color: inherit;
     cursor: text;
@@ -122,9 +121,9 @@ element normal.normal {
 element selected.normal {
     border: 1px solid;
     border-radius: 16px;
-    border-color: #79c0ffB3;
-    background-color: #0d2240;
-    text-color: #79c0ffFF;
+    border-color: @accent-border;
+    background-color: @accent-fill;
+    text-color: @accent;
 }
 
 element-icon {
@@ -148,7 +147,7 @@ error-message {
     padding: 10px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: black / 10%;
     text-color: @foreground;
 }

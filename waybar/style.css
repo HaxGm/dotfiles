@@ -33,7 +33,8 @@ tooltip label,
 }
 
 
-/* Common module styling */
+/* Common module styling. The per-module rules below set only their accent
+   colour — background and border are inherited from here. */
 #battery,
 #wireplumber,
 #clock,
@@ -44,28 +45,19 @@ tooltip label,
     padding: 4px 14px;
     margin: 4px 3px 6px;
     border-radius: 16px;
-    border: 1px solid alpha(@bright_black, 0.6);
+    border: 1px solid @border_subtle;
     background: @primary_background;
     transition: all 0.3s ease;
 }
 
-
-/* Tray */
-#tray {
-    border-color: alpha(@bright_black, 0.6);
-}
-
-/* Arch Button */
-#custom-arch {
-    font-size: 16px;
-    color: @bright_blue;
-    background-color: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
-}
-
+/* Shared hover fill; each module tints its own border below. */
+#battery:hover,
+#wireplumber:hover,
+#clock:hover,
+#network:hover,
+#bluetooth:hover,
 #custom-arch:hover {
-    background: #161b22;
-    border-color: alpha(@bright_blue, 0.5);
+    background: @surface_hover;
 }
 
 
@@ -78,40 +70,48 @@ tooltip label,
     padding: 4px 15px;
     margin: 2px 2px;
     border-radius: 16px;
-    border: 1px solid alpha(@bright_black, 0.6);
+    border: 1px solid @border_subtle;
     background: @primary_background;
     color: @normal_white;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    background: #0d2240;
+    background: @accent_fill;
     border-color: @bright_blue;
     color: @bright_blue;
 }
 
 #workspaces button:hover {
-    background: #161b22;
+    background: @surface_hover;
     border-color: alpha(@normal_white, 0.4);
     color: @bright_blue;
 }
 
 #workspaces button.urgent {
-    background: #3d1117;
+    background: @urgent_fill;
     border-color: @bright_red;
     color: @bright_red;
+}
+
+
+/* Arch Button */
+#custom-arch {
+    font-size: 16px;
+    color: @bright_blue;
+}
+
+#custom-arch:hover {
+    border-color: alpha(@bright_blue, 0.5);
 }
 
 
 /* Clock */
 #clock {
     color: @bright_cyan;
-    border-color: alpha(@bright_black, 0.6);
-    background-color: @primary_background;
 }
 
 #clock:hover {
-    background: #161b22;
     border-color: alpha(@bright_cyan, 0.5);
 }
 
@@ -119,36 +119,26 @@ tooltip label,
 /* Battery */
 #battery {
     color: @normal_green;
-    border-color: alpha(@bright_black, 0.6);
-    background-color: @primary_background;
 }
 
 #battery:hover {
-    background: #161b22;
     border-color: alpha(@normal_green, 0.5);
 }
 
 #battery.full {
     color: @normal_cyan;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
 }
 
 #battery.full:hover {
-    background: #161b22;
     border-color: alpha(@normal_cyan, 0.5);
 }
 
 #battery.warning:not(.charging) {
     color: @bright_yellow;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
 }
 
 #battery.critical:not(.charging) {
     color: @normal_red;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
     animation: pulse 1.5s ease-in-out infinite;
 }
 
@@ -156,12 +146,9 @@ tooltip label,
 /* Wireplumber */
 #wireplumber {
     color: @bright_magenta;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
 }
 
 #wireplumber:hover {
-    background: #161b22;
     border-color: alpha(@bright_magenta, 0.5);
 }
 
@@ -169,12 +156,9 @@ tooltip label,
 /* Network */
 #network {
     color: @bright_cyan;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
 }
 
 #network:hover {
-    background: #161b22;
     border-color: alpha(@bright_cyan, 0.5);
 }
 
@@ -182,12 +166,9 @@ tooltip label,
 /* Bluetooth */
 #bluetooth {
     color: @bright_yellow;
-    background: @primary_background;
-    border-color: alpha(@bright_black, 0.6);
 }
 
 #bluetooth:hover {
-    background: #161b22;
     border-color: alpha(@bright_yellow, 0.5);
 }
 

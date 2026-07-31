@@ -5,4 +5,11 @@
     selected:       #58a6ffFF;
     active:         #3fb950FF;
     urgent:         #ff7b72FF;
+
+    subtle:         #6e7681FF;   /* bright_black */
+    subtle-border:  #6e768166;   /* bright_black @ 40% */
+    accent:         #79c0ffFF;   /* bright_blue */
+    accent-border:  #79c0ffB3;   /* bright_blue @ 70% */
+    accent-fill:    #0d2240FF;
+    active-border:  #3fb950B3;   /* normal_green @ 70% */
 }

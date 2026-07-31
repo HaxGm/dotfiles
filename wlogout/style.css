@@ -13,21 +13,21 @@ window {
 
 button {
     border-radius: 16px;
-    border: 1px solid alpha(@bright_black, 0.6);
-	text-decoration-color: @primary_foreground;
+    border: 1px solid @border_subtle;
+    text-decoration-color: @primary_foreground;
     color: @primary_foreground;
-	background-color: @primary_background;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
-	margin: 10px;
-	transition: all 0.3s ease;
+    background-color: @primary_background;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    margin: 10px;
+    transition: all 0.3s ease;
 }
 
 button:focus, button:active, button:hover {
-	background-color: #161b22;
-	border-color: alpha(@bright_blue, 0.7);
-	outline-style: none;
+    background-color: @surface_hover;
+    border-color: alpha(@bright_blue, 0.7);
+    outline-style: none;
 }
 
 #lock {

@@ -18,7 +18,7 @@ window {
     padding: 0px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: @background;
     cursor: "default";
 }
@@ -41,7 +41,7 @@ inputbar {
     padding: 12px 14px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: @background;
     text-color: @foreground;
 }
@@ -54,7 +54,7 @@ prompt {
 
 entry {
     placeholder: "Filter";
-    placeholder-color: #6e7681FF;
+    placeholder-color: @subtle;
     background-color: inherit;
     text-color: inherit;
     cursor: text;
@@ -121,15 +121,15 @@ element alternate.active {
 
 /* Cursor: blue-tinted fill, brighter blue border and label */
 element selected.normal {
-    border-color: #79c0ffB3;
-    background-color: #0d2240;
-    text-color: #79c0ffFF;
+    border-color: @accent-border;
+    background-color: @accent-fill;
+    text-color: @accent;
 }
 
 /* Cursor sitting on the connected row: same fill, green kept */
 element selected.active {
-    border-color: #3fb950B3;
-    background-color: #0d2240;
+    border-color: @active-border;
+    background-color: @accent-fill;
     text-color: @active;
 }
 
@@ -147,7 +147,7 @@ error-message {
     padding: 10px;
     border: 1px solid;
     border-radius: 16px;
-    border-color: #6e768166;
+    border-color: @subtle-border;
     background-color: black / 10%;
     text-color: @foreground;
 }

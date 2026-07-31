@@ -26,3 +26,9 @@
 @define-color bright_magenta #d2a8ff;
 @define-color bright_cyan #56d4dd;
 @define-color bright_white #ffffff;
+
+@define-color surface #0d1117;        /* one step above the background */
+@define-color surface_hover #161b22;  /* hover / active fill */
+@define-color accent_fill #0d2240;    /* selected workspace, selected row */
+@define-color urgent_fill #3d1117;    /* urgent workspace */
+@define-color border_subtle alpha(@bright_black, 0.6);

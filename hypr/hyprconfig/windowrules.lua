@@ -46,7 +46,7 @@ hl.layer_rule({
 
 hl.window_rule({
     name  = "float-settings-dialogs",
-    match = { class = "^(nm-connection-editor|blueman-manager|com\\.saivert\\.pwvucontrol)$" },
+    match = { class = "^(nm-connection-editor|blueman-manager|org\\.pulseaudio\\.pavucontrol)$" },
 
     float  = true,
     size   = "600 400",

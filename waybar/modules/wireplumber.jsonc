@@ -8,7 +8,7 @@
             "󰕾"
         ],
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "pwvucontrol",
+        "on-click-right": "pavucontrol",
         "scroll-step": 2
     }
 }

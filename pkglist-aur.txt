@@ -1,0 +1,5 @@
+visual-studio-code-bin
+wlogout
+yay
+zsh-autocomplete-git
+zsh-autosuggestions-git

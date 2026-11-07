@@ -14,7 +14,7 @@ hl.config({
 
 hl.device({
     name          = "razer-razer-deathadder-v3",
-    sensitivity   = -0.3,    -- negative = slower, positive = faster
+    sensitivity   = -0.5,    -- negative = slower, positive = faster
     accel_profile = "flat",  -- optional: no acceleration, the same speed however fast you move
 })
 

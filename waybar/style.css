@@ -1,9 +1,11 @@
 @import "../colors/palette.css";
 
 /*
- * The bar is styled as one more kitty window: GitHub Dark at kitty's 0.8
- * background_opacity, frosted by the waybar layer_rule in
- * hypr/hyprconfig/windowrules.lua, with Hyprland's 10px rounding.
+ * The bar is split into three islands (left, center, right), each styled as
+ * one more kitty window: GitHub Dark at kitty's 0.8 background_opacity,
+ * frosted by the waybar layer_rule in hypr/hyprconfig/windowrules.lua, with
+ * Hyprland's 10px rounding. The bar itself is transparent; the rule's
+ * ignore_alpha keeps the blur off the gaps between islands.
  *
  * Inside, it borrows two of starship's segment styles:
  *   bright blue, dark text   (directory)    -> launcher button
@@ -21,18 +23,20 @@
 /* ── Bar ─────────────────────────────────────────────────────────── */
 
 window#waybar {
-    background-color: alpha(@primary_background, 0.8);
-    border: 1px solid alpha(@bright_black, 0.35);
-    border-radius: 10px;
+    background-color: transparent;
     color: @primary_foreground;
 }
 
-.modules-left {
-    margin-left: 5px;
-}
 
+/* ── Islands ─────────────────────────────────────────────────────── */
+
+.modules-left,
+.modules-center,
 .modules-right {
-    margin-right: 5px;
+    padding: 0 5px;
+    background-color: alpha(@primary_background, 0.8);
+    border: 1px solid alpha(@bright_black, 0.35);
+    border-radius: 10px;
 }
 
 
@@ -129,17 +133,14 @@ window#waybar.empty #window {
 
 /* ── Center: clock ──────────────────────────────────────────────── */
 
-/* Always-on pill in the hover fill, so it reads as a module at rest.
-   1px less padding than the others makes up for the border. */
+/* The island already frames it, so the clock is just text */
 #clock {
-    padding: 1px 14px;
-    background-color: @surface_hover;
-    border: 1px solid alpha(@bright_black, 0.35);
+    padding: 2px 12px;
     color: @primary_foreground;
 }
 
 #clock:hover {
-    border-color: alpha(@bright_cyan, 0.5);
+    background-color: @surface_hover;
 }
 
 /* ── Right: status ───────────────────────────────────────────────── */

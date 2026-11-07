@@ -2,7 +2,14 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "persistent-workspaces": {
-            "*": 5 // 5 workspaces by default on every monitor
+            // Named explicitly: `"*": 5` numbers them by Hyprland's monitor ID
+            // (ID 1 gets 6-10), which breaks when the laptop panel is disabled
+            // and the external monitor is the only one. [] = show on all outputs.
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         }
     }
 }

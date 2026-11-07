@@ -20,6 +20,3 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -- Qt
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-
-
-

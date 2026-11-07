@@ -1,28 +1,248 @@
 @import "../colors/palette.css";
 
+/*
+ * The bar is styled as one more kitty window: GitHub Dark at kitty's 0.8
+ * background_opacity, frosted by the waybar layer_rule in
+ * hypr/hyprconfig/windowrules.lua, with Hyprland's 10px rounding.
+ *
+ * Inside, it borrows two of starship's segment styles:
+ *   bright blue, dark text   (directory)    -> launcher button
+ *   selection blue           (git branch)   -> active workspace
+ * Everything else is plain text with a coloured icon, like fastfetch.
+ */
+
 * {
     all: unset;
     font-family: "AdwaitaMono Nerd Font Mono", monospace;
     font-size: 14px;
 }
 
-/* Window */
+
+/* ── Bar ─────────────────────────────────────────────────────────── */
+
 window#waybar {
-    background-color: transparent;
+    background-color: alpha(@primary_background, 0.8);
+    border: 1px solid alpha(@bright_black, 0.35);
+    border-radius: 10px;
     color: @primary_foreground;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+}
+
+.modules-left {
+    margin-left: 5px;
+}
+
+.modules-right {
+    margin-right: 5px;
 }
 
 
-/* Tooltip, tray menu */
+/* ── Shared segment shape ────────────────────────────────────────── */
+
+#custom-arch,
+#workspaces button,
+#window,
+#clock,
+#tray,
+#idle_inhibitor,
+#backlight,
+#wireplumber,
+#bluetooth,
+#network,
+#battery,
+#custom-notification,
+#custom-power {
+    padding: 2px 10px;
+    margin: 5px 2px;
+    border-radius: 16px;
+    transition: background-color 0.25s ease, color 0.25s ease, min-width 0.25s ease;
+}
+
+#tray:hover,
+#idle_inhibitor:hover,
+#backlight:hover,
+#wireplumber:hover,
+#bluetooth:hover,
+#network:hover,
+#custom-notification:hover {
+    background-color: @surface_hover;
+}
+
+
+/* ── Launcher (starship directory segment) ───────────────────────── */
+
+#custom-arch {
+    padding: 1px 13px 3px 13px;  /* glyph sits low in the font; lift it 1px */
+    margin-right: 6px;
+    font-size: 16px;
+    background-color: @bright_blue;
+    color: @primary_background;
+}
+
+#custom-arch:hover {
+    background-color: @normal_blue;
+}
+
+
+/* ── Workspaces (starship git segment) ───────────────────────────── */
+
+#workspaces button {
+    min-width: 10px;
+    padding: 2px 8px;
+    margin: 5px 1px;
+    color: @primary_foreground;
+}
+
+#workspaces button.empty {
+    color: @bright_black;
+}
+
+#workspaces button:hover {
+    background-color: @surface_hover;
+}
+
+#workspaces button.active {
+    min-width: 30px;
+    background-color: @selection_background;
+    color: @primary_foreground;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: @urgent_fill;
+    color: @bright_red;
+}
+
+
+/* ── Window title ────────────────────────────────────────────────── */
+
+#window {
+    margin-left: 6px;
+    color: @normal_white;
+}
+
+/* No window on this workspace: drop the padding so nothing is left behind */
+window#waybar.empty #window {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ── Center: clock ──────────────────────────────────────────────── */
+
+/* Always-on pill in the hover fill, so it reads as a module at rest.
+   1px less padding than the others makes up for the border. */
+#clock {
+    padding: 1px 14px;
+    background-color: @surface_hover;
+    border: 1px solid alpha(@bright_black, 0.35);
+    color: @primary_foreground;
+}
+
+#clock:hover {
+    border-color: alpha(@bright_cyan, 0.5);
+}
+
+/* ── Right: status ───────────────────────────────────────────────── */
+
+#tray {
+    margin-right: 6px;
+}
+
+#tray > .needs-attention {
+    background-color: @urgent_fill;
+    border-radius: 16px;
+}
+
+#idle_inhibitor {
+    color: @bright_black;
+}
+
+#idle_inhibitor.activated {
+    color: @bright_yellow;
+}
+
+#wireplumber.muted,
+#bluetooth.off {
+    color: @bright_black;
+}
+
+#network.disconnected {
+    color: @bright_red;
+}
+
+#network.vpn {
+    padding: 2px 8px;
+    color: @bright_green;
+}
+
+#network.vpn.disconnected {
+    padding: 0;
+    margin: 0;
+}
+
+/* Battery is a solid pill whose colour is its state */
+#battery {
+    margin-left: 6px;
+    padding: 2px 12px;
+    background-color: @normal_green;
+    color: @primary_background;
+    font-weight: bold;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: @bright_green;
+}
+
+#battery.full {
+    background-color: @normal_cyan;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @bright_yellow;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @normal_red;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+#custom-notification {
+    margin-left: 6px;
+    color: @normal_white;
+}
+
+#custom-notification.notification,
+#custom-notification.inhibited-notification {
+    color: @bright_yellow;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-notification,
+#custom-notification.dnd-inhibited-none,
+#custom-notification.dnd-inhibited-notification {
+    color: @bright_black;
+}
+
+#custom-power {
+    padding: 2px 11px 2px 10px;
+    color: @normal_red;
+}
+
+#custom-power:hover {
+    background-color: @urgent_fill;
+    color: @bright_red;
+}
+
+
+/* ── Tooltips and tray menus: small kitty windows ────────────────── */
+
 tooltip,
 #tray menu {
-    background-color: @primary_background; /* Dark background */
-    border: 2px solid alpha(@selection_background, 0.7); /* Selection-tinted border */
-    box-shadow: alpha(@primary_background, 0.8) 2px 2px 5px 2px; /* Deep shadow */
-    color: @primary_foreground;
+    background-color: alpha(@primary_background, 0.92);
+    border: 1px solid @border_subtle;
+    border-radius: 10px;
+    padding: 6px;
 }
 
 /* These are separate toplevels, so they don't inherit window#waybar's color.
@@ -32,157 +252,29 @@ tooltip label,
     color: @primary_foreground;
 }
 
-
-/* Common module styling. The per-module rules below set only their accent
-   colour — background and border are inherited from here. */
-#battery,
-#wireplumber,
-#clock,
-#network,
-#bluetooth,
-#custom-arch,
-#tray {
-    padding: 4px 14px;
-    margin: 4px 3px 6px;
-    border-radius: 16px;
-    border: 1px solid @border_subtle;
-    background: @primary_background;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+tooltip label {
+    padding: 2px 4px;
 }
 
-/* Shared hover fill; each module tints its own border below. */
-#battery:hover,
-#wireplumber:hover,
-#clock:hover,
-#network:hover,
-#bluetooth:hover,
-#custom-arch:hover {
-    background: @surface_hover;
+#tray menu menuitem {
+    padding: 4px 10px;
+    border-radius: 6px;
 }
 
-
-/* Workspaces */
-#workspaces {
-    margin: 4px 3px;
-}
-
-#workspaces button {
-    padding: 4px 15px;
-    margin: 2px 2px;
-    border-radius: 16px;
-    border: 1px solid @border_subtle;
-    background: @primary_background;
-    color: @normal_white;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
-#workspaces button.active {
-    background: @accent_fill;
-    border-color: @bright_blue;
+#tray menu menuitem:hover {
+    background-color: @accent_fill;
     color: @bright_blue;
 }
 
-#workspaces button:hover {
-    background: @surface_hover;
-    border-color: alpha(@normal_white, 0.4);
-    color: @bright_blue;
-}
-
-#workspaces button.urgent {
-    background: @urgent_fill;
-    border-color: @bright_red;
-    color: @bright_red;
-}
-
-
-/* Arch Button */
-#custom-arch {
-    font-size: 16px;
-    color: @bright_blue;
-}
-
-#custom-arch:hover {
-    border-color: alpha(@bright_blue, 0.5);
-}
-
-
-/* Clock */
-#clock {
-    color: @bright_cyan;
-}
-
-#clock:hover {
-    border-color: alpha(@bright_cyan, 0.5);
-}
-
-
-/* Battery */
-#battery {
-    color: @normal_green;
-}
-
-#battery:hover {
-    border-color: alpha(@normal_green, 0.5);
-}
-
-#battery.full {
-    color: @normal_cyan;
-}
-
-#battery.full:hover {
-    border-color: alpha(@normal_cyan, 0.5);
-}
-
-#battery.warning:not(.charging) {
-    color: @bright_yellow;
-}
-
-#battery.critical:not(.charging) {
-    color: @normal_red;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-
-/* Wireplumber */
-#wireplumber {
-    color: @bright_magenta;
-}
-
-#wireplumber:hover {
-    border-color: alpha(@bright_magenta, 0.5);
-}
-
-
-/* Network */
-#network {
-    color: @bright_cyan;
-}
-
-#network:hover {
-    border-color: alpha(@bright_cyan, 0.5);
-}
-
-
-/* Bluetooth */
-#bluetooth {
-    color: @bright_yellow;
-}
-
-#bluetooth:hover {
-    border-color: alpha(@bright_yellow, 0.5);
+#tray menu separator {
+    min-height: 1px;
+    margin: 4px 6px;
+    background-color: @border_subtle;
 }
 
 
 @keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1; }
 }

@@ -1,8 +1,16 @@
 {
+    // Leftmost segment, the bar's "prompt": opens the app launcher
     "custom/arch": {
         "format": "󰣇",
         "tooltip": true,
-        "tooltip-format": "Start Menu",
+        "tooltip-format": "Applications",
+        "on-click": "$HOME/.config/rofi/launcher.sh",
+        "on-click-right": "wlogout"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
         "on-click": "wlogout"
     }
 }

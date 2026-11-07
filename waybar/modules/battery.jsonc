@@ -7,6 +7,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
+        "format-full": "󰁹 full",
+        "tooltip-format": "{timeTo}\n{power:.1f} W",
         "format-icons": {
             "default": [
                 "󰂎",

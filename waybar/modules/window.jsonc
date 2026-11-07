@@ -1,0 +1,13 @@
+{
+    "hyprland/window": {
+        // Same arrow starship puts between the folder icon and the path
+        "format": "<span color='#6e7681'>→</span> {title}",
+        "max-length": 48,
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "󰈹 $1",
+            "(.*) - Visual Studio Code": "󰨞 $1",
+            "(.*) - Zed": "$1"
+        }
+    }
+}

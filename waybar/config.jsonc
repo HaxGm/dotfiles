@@ -1,29 +1,47 @@
 {
     "include": [
-        "modules/workspaces.jsonc",
-        "modules/clock.jsonc",
-        "modules/battery.jsonc",
-        "modules/wireplumber.jsonc",
-        "modules/network.jsonc",
-        "modules/bluetooth.jsonc",
         "modules/arch.jsonc",
-        "modules/tray.jsonc"
+        "modules/workspaces.jsonc",
+        "modules/window.jsonc",
+        "modules/clock.jsonc",
+        "modules/tray.jsonc",
+        "modules/idle.jsonc",
+        "modules/backlight.jsonc",
+        "modules/wireplumber.jsonc",
+        "modules/bluetooth.jsonc",
+        "modules/network.jsonc",
+        "modules/battery.jsonc",
+        "modules/notification.jsonc"
     ],
     "reload_style_on_change": true,
     "layer": "top",
     "position": "top",
+
+    // Float the bar like a tiled window: same 10px as Hyprland's gaps_out,
+    // so its edges line up with the windows underneath
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 0,
+
     "modules-left": [
+        "custom/arch",
         "hyprland/workspaces",
-        "tray"
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
+        "tray",
+        "idle_inhibitor",
+        "backlight",
         "wireplumber#sink",
         "bluetooth",
         "network",
+        "network#vpn",
         "battery",
-        "custom/arch"
+        "custom/notification",
+        "custom/power"
     ]
 }

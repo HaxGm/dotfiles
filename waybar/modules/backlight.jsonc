@@ -1,0 +1,9 @@
+{
+    "backlight": {
+        "format": "<span color='#e3b341'>{icon}</span> {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip-format": "Brightness {percent}%",
+        "on-scroll-up": "brightnessctl -q set 5%+",
+        "on-scroll-down": "brightnessctl -q set 5%-"
+    }
+}

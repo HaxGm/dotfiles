@@ -37,6 +37,16 @@ hl.layer_rule({
     dim_around = true
 })
 
+-- waybar: frost it like a kitty window. ignore_alpha keeps the blur inside the
+-- rounded corners; blur_popups covers tooltips and tray menus
+hl.layer_rule({
+    match = { namespace = "waybar" },
+    name = "waybar-blur",
+    blur = true,
+    blur_popups = true,
+    ignore_alpha = 0.3,
+})
+
 -- swaync
 hl.layer_rule({
     match = { namespace = "swaync-control-center"},

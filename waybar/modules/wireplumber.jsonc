@@ -1,7 +1,7 @@
 {
     "wireplumber#sink": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰝟 0%",
+        "format": "<span color='#d2a8ff'>{icon}</span> {volume}%",
+        "format-muted": "󰝟 muted",
         "format-icons": [
             "󰕿",
             "󰖀",

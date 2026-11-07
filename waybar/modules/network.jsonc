@@ -1,15 +1,27 @@
 {
     "network": {
-        "format": "{ifname}",
-        "format-wifi": "󰖩 {essid}",
-        "format-ethernet": "󰈀 {ifname}",
-        "format-disconnected": "󰖪",
+        // Pinned to Wi-Fi so the Mullvad tunnel doesn't take over this module
+        "interface": "wlp*",
+        "format": "<span color='#56d4dd'>󰈀</span> {ifname}",
+        "format-wifi": "<span color='#56d4dd'>{icon}</span> {essid}",
+        "format-ethernet": "<span color='#56d4dd'>󰈀</span> {ifname}",
+        "format-disconnected": "<span color='#ff7b72'>󰤮</span> offline",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip-format": "{ifname}",
-        "tooltip-format-wifi": "SSID: {essid} Strength: {signalStrength}%",
-        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-wifi": "{essid} · {signalStrength}%\n{ipaddr}\n󰇚 {bandwidthDownBytes}  󰕒 {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
         "tooltip-format-disconnected": "Disconnected",
         "on-click": "networkmanager_dmenu",
         "on-click-right": "nm-connection-editor",
-        "max-length": 50
+        "interval": 5,
+        "max-length": 28
+    },
+    // Shield that only exists while the Mullvad tunnel is up
+    "network#vpn": {
+        "interface": "wg0-mullvad",
+        "format": "󰦝",
+        "format-disconnected": "",
+        "tooltip-format": "Mullvad VPN\n{ipaddr}",
+        "on-click": "mullvad-vpn"
     }
 }

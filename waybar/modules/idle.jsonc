@@ -1,0 +1,12 @@
+{
+    // Keeps hypridle from locking/dimming, e.g. while watching something
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰅶",
+            "deactivated": "󰾪"
+        },
+        "tooltip-format-activated": "Staying awake",
+        "tooltip-format-deactivated": "Idle normally"
+    }
+}

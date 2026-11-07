@@ -21,8 +21,10 @@ Hyprland desktop on Arch, themed after **GitHub Dark**.
 
 ![Desktop](screenshots/desktop.png)
 
-Bare desktop — waybar across the top: workspaces and tray on the left, clock
-centred, audio / bluetooth / network / battery on the right.
+Bare desktop — waybar floats across the top as a frosted panel styled like a
+kitty window, with starship-style segments: launcher, workspaces and window
+title on the left, clock centred, tray / brightness / audio /
+bluetooth / network / VPN / battery / notifications / power on the right.
 
 | | |
 |---|---|
